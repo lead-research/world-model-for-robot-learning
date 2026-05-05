@@ -15,10 +15,21 @@ predicted = mlp(dit_outputs[:, -M:])
 loss = -cosine_similarity(predicted, future_obs_embedding)
 ```
 
+### JEPA 风格 (VLA-JEPA 范式)
+```python
+# 核心: leakage-free state prediction
+# student 只看到当前观测，target encoder 编码未来帧
+# 预测在隐空间而非像素空间
+student_rep = student_encoder(current_obs)
+predicted_future = predictor(student_rep)
+target_rep = target_encoder(future_obs)  # no grad, EMA updated
+loss = mse(predicted_future, target_rep)
+```
+
 ### 视频预测 backbone
 - (待填充)
 
-### JEPA / 隐空间预测
+### 动作-视频联合建模
 - (待填充)
 
 ---
@@ -40,6 +51,15 @@ loss = -cosine_similarity(predicted, future_obs_embedding)
 K = 4  # denoising steps
 ```
 
+### JEPA 训练技巧
+```python
+# VLA-JEPA 关键: target encoder 不参与梯度
+# 防止信息泄漏，确保学到真正的预测而非复制
+target_encoder.requires_grad = False
+# 通过 EMA 从 student 缓慢更新
+θ_target ← ρ * θ_target + (1-ρ) * θ_student
+```
+
 ---
 
 ## 可复用组件
@@ -50,6 +70,7 @@ K = 4  # denoising steps
 | DiT + cross-attention | GR00T N1 | VLA policy backbone |
 | SigLIP-2 | Google | 高质量 vision-language 编码 |
 | REPA alignment | Seedream | 扩散模型表征对齐 |
+| JEPA predictor | LeCun/Meta | 隐空间未来预测 |
 
 ---
 
