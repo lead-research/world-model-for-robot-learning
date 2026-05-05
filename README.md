@@ -15,15 +15,15 @@
 | 🔬 Latent-space World Modeling | 1 / 6 | 🟡 进行中 |
 | 🎮 World Model for RL | 0 / 16 | ⚪ 待开始 |
 | 📏 World Model for Evaluation | 0 / 10 | ⚪ 待开始 |
-| 🎯 IDM-style Policies | 0 / ? | ⚪ 待补充 |
-| 🏗️ Single-backbone | 0 / ? | ⚪ 待补充 |
-| 🧩 MoE/MoT-style | 0 / ? | ⚪ 待补充 |
-| 🔗 Unified VLA | 0 / ? | ⚪ 待补充 |
-| 🎬 Video Generation | 0 / ? | ⚪ 待补充 |
-| 📋 Benchmarks | 0 / ? | ⚪ 待补充 |
-| 🗂️ Datasets | 0 / ? | ⚪ 待补充 |
+| 🎯 IDM-style Policies | 0 / 12 | ⚪ 待开始 |
+| 🏗️ Single-backbone | 0 / 8 | ⚪ 待开始 |
+| 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待开始 |
+| 🔗 Unified VLA | 0 / 12 | ⚪ 待开始 |
+| 🎬 Video Generation | 0 / 25 | ⚪ 待开始 |
+| 📋 Benchmarks | 0 / 8 | ⚪ 待开始 |
+| 🗂️ Datasets | 0 / 8 | ⚪ 待开始 |
 
-**总体: 1 / 32+ 完成**
+**总体: 1 / 114 完成**
 
 ---
 
@@ -33,7 +33,13 @@
 Phase 1: Latent-space WM (6篇) ──────── 🟡 进行中
 Phase 2: WM for RL (16篇)
 Phase 3: WM for Evaluation (10篇)
-Phase 4: 其余分类 (待补充)
+Phase 4: IDM-style (12篇)
+Phase 5: Single-backbone (8篇)
+Phase 6: MoE/MoT-style (9篇)
+Phase 7: Unified VLA (12篇)
+Phase 8: Video Generation (25篇)
+Phase 9: Benchmarks (8篇)
+Phase 10: Datasets (8篇)
 ```
 
 ---
@@ -51,10 +57,16 @@ Phase 4: 其余分类 (待补充)
 ```
 ├── progress/           # 学习进度追踪
 ├── papers/             # 单篇论文深度笔记
+│   ├── idm-style/
+│   ├── single-backbone/
+│   ├── moe-mot/
+│   ├── unified-vla/
 │   ├── latent-space-wm/
 │   ├── wm-for-rl/
 │   ├── wm-for-eval/
-│   └── ...
+│   ├── video-generation/
+│   ├── benchmarks/
+│   └── datasets/
 ├── synthesis/          # 分类综述与技术演进
 ├── open-problems.md    # 领域开放问题
 └── method-toolbox.md   # 可复用方法/技巧
@@ -66,6 +78,7 @@ Phase 4: 其余分类 (待补充)
 
 - **当前方向**: VLA (Vision-Language-Action) 长程操作
 - **核心问题**: 世界模型如何赋能长程机器人任务？
+- **特别关注**: 模型泛化性，尤其是面向家庭场景的适用性
 - **硬件关联**: Pallas 7-DOF + 灵巧手, Piper 桌面臂
 
 ---

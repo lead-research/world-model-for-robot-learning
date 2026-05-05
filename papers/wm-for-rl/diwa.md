@@ -1,13 +1,13 @@
-# FLARE
+# DiWA
 
-> Robot Learning with Implicit World Modeling
+> DiWA: Diffusion Policy Adaptation with World Models
 > Venue: CoRL'25
 
 ---
 
 ## 基本信息
 
-- **arXiv**: https://arxiv.org/abs/2505.15659
+- **arXiv**: https://arxiv.org/abs/2508.03645
 - **Code**: —
 - **Project**: —
 
