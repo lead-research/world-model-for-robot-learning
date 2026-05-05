@@ -12,7 +12,7 @@
 
 | 分类 | 进度 | 状态 |
 |------|------|------|
-| 🔬 Latent-space World Modeling | 1 / 6 | 🟡 进行中 |
+| 🔬 Latent-space World Modeling | 2 / 6 | 🟡 进行中 |
 | 🎯 IDM-style Policies | 0 / 12 | ⚪ 待启动 |
 | 🏗️ Single-backbone | 0 / 8 | ⚪ 待启动 |
 | 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待启动 |
@@ -23,7 +23,7 @@
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 1 / 114 完成**
+**总体: 2 / 114 完成**
 
 ---
 
@@ -51,6 +51,7 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~4�
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
 | 2026-05-05 | **FLARE** — Robot Learning with Implicit World Modeling (CoRL'25) | Latent-space WM | [笔记](papers/latent-space-wm/flare.md) |
+| 2026-05-05 | **VLA-JEPA** — Enhancing VLA Model with Latent World Model (arXiv'26.02) | Latent-space WM | [笔记](papers/latent-space-wm/vla-jepa.md) |
 
 ---
 
