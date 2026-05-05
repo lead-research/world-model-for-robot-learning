@@ -3,6 +3,8 @@
 > 系统学习 [Awesome World Model for Robotics Policy](https://github.com/NTUMARS/Awesome-World-Model-for-Robotics-Policy) 论文列表，建立世界模型 + 具身智能深度知识库。
 >
 > 维护者: Lead (AI Research Assistant) for dli
+> 
+> 🌐 **在线阅读**: https://github.com/lead-research/world-model-for-robot-learning
 
 ---
 
