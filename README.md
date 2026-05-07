@@ -12,9 +12,9 @@
 
 | 分类 | 进度 | 状态 |
 |------|------|------|
-| 🔬 Latent-space World Modeling | 2 / 6 | 🟡 进行中 |
+| 🔬 Latent-space World Modeling | **6 / 6** | ✅ **已完成** |
+| 🏗️ Single-backbone Policies | 0 / 8 | 🟡 **当前进行中** |
 | 🎯 IDM-style Policies | 0 / 12 | ⚪ 待启动 |
-| 🏗️ Single-backbone | 0 / 8 | ⚪ 待启动 |
 | 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待启动 |
 | 🔗 Unified VLA | 0 / 12 | ⚪ 待启动 |
 | 🎮 World Model for RL | 0 / 16 | ⚪ 待启动 |
@@ -23,21 +23,21 @@
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 2 / 114 完成**
+**总体: 6 / 114 完成 (5.3%)**
 
 ---
 
 ## 🗓️ 学习路线图
 
 ```
-Phase 1: Latent-space WM (6篇)     ──────── 🟡 进行中 (~3天)
-Phase 2: IDM-style (12篇)          ──────── ⚪ 待启动 (~6天)
-Phase 3: Single-backbone (8篇)     ──────── ⚪ 待启动 (~4天)
+Phase 1: Latent-space WM (6篇)     ──────── ✅ 已完成 (2026-05-05 ~ 2026-05-07)
+Phase 2: Single-backbone (8篇)     ──────── 🟡 当前进行中 (~4天)
+Phase 3: IDM-style (12篇)          ──────── ⚪ 待启动 (~6天)
 Phase 4: MoE/MoT-style (9篇)       ──────── ⚪ 待启动 (~5天)
 Phase 5: Unified VLA (12篇)        ──────── ⚪ 待启动 (~6天)
 Phase 6: WM for RL (16篇)          ──────── ⚪ 待启动 (~8天)
 Phase 7: WM for Evaluation (10篇)  ──────── ⚪ 待启动 (~5天)
-Phase 8: Video Generation (25篇)    ──────── ⚪ 待启动 (~13天)
+Phase 8: Video Generation (25篇)   ──────── ⚪ 待启动 (~13天)
 Phase 9: Benchmarks (8篇)           ──────── ⚪ 待启动 (~4天)
 Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~4天)
 
@@ -50,6 +50,10 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~4�
 
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
+| 2026-05-07 | **DIAL** — Decoupling Intent and Action via Latent WM (arXiv'26.03) | Latent-space WM | [笔记](papers/latent-space-wm/dial.md) |
+| 2026-05-07 | **WoG** — World Modeling in Condition Space (arXiv'26.02) | Latent-space WM | [笔记](papers/latent-space-wm/world-guidance-wog.md) |
+| 2026-05-07 | **JEPA-VLA** — Video Predictive Embedding for VLA (arXiv'26.02) | Latent-space WM | [笔记](papers/latent-space-wm/jepa-vla.md) |
+| 2026-05-07 | **VISTA** — Scaling World Model for Hierarchical Manipulation (arXiv'26.02) | Latent-space WM | [笔记](papers/latent-space-wm/vista.md) |
 | 2026-05-05 | **FLARE** — Robot Learning with Implicit World Modeling (CoRL'25) | Latent-space WM | [笔记](papers/latent-space-wm/flare.md) |
 | 2026-05-05 | **VLA-JEPA** — Enhancing VLA Model with Latent World Model (arXiv'26.02) | Latent-space WM | [笔记](papers/latent-space-wm/vla-jepa.md) |
 
@@ -88,4 +92,4 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~4�
 
 ---
 
-*Last updated: 2026-05-05 by Lead*
+*Last updated: 2026-05-07 by Lead*
