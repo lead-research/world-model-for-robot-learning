@@ -2,7 +2,7 @@
 
 > 每日更新，追踪每篇论文的学习状态
 > 
-> **总计: 114 篇 | 已完成: 7 | 待读: 107**
+> **总计: 114 篇 | 已完成: 10 | 待读: 104**
 
 ---
 
@@ -25,14 +25,14 @@
 
 ## 当前活跃分类
 
-### 🏗️ Single-backbone Policies (8篇 | 1/8完成)
+### 🏗️ Single-backbone Policies (8篇 | 4/8完成)
 
 | # | 论文 | 会议 | 状态 | 笔记 | 日期 |
 |---|------|------|------|------|------|
-| 1 | **UVA — Unified Video Action Model** | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uva.md) | 2026-05-08 |
-| 2 | UWM — Unified World Models | RSS'25 | ⏳ | — | — |
-| 3 | VideoVLA — Video Generators Can Be Generalizable Robot Manipulators | NeurIPS'25 | ⏳ | — | — |
-| 4 | UD-VLA — Unified Diffusion VLA | ICLR'26 | ⏳ | — | — |
+| 1 | UVA — Unified Video Action Model | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uva.md) | 2026-05-08 |
+| 2 | **UWM — Unified World Models** | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uwm.md) | 2026-05-08 |
+| 3 | **VideoVLA — Video Generators Can Be Generalizable Robot Manipulators** | NeurIPS'25 | ✅ 完成 | [笔记](../papers/single-backbone/videovla.md) | 2026-05-08 |
+| 4 | **UD-VLA — Unified Diffusion VLA** | ICLR'26 | ✅ 完成 | [笔记](../papers/single-backbone/ud-vla.md) | 2026-05-08 |
 | 5 | VideoPolicy — Video Generators are Robot Policies | arXiv'25.08 | ⏳ | — | — |
 | 6 | Cosmos Policy | arXiv'26.01 | ⏳ | — | — |
 | 7 | DreamZero (WAM) | arXiv'26.02 | ⏳ | — | — |
@@ -58,15 +58,15 @@
 ## 学习统计
 
 ```
-已完成:      7 篇 (6.1%)
+已完成:      10 篇 (8.8%)
 进行中:      0 篇
-待读:      107 篇
+待读:      104 篇
 
 分类完成:    1 / 10
-当前分类:    Single-backbone Policies
+当前分类:    Single-backbone Policies (4/8)
 
-每日目标:    2 篇
-本周完成:    5 篇 (2026-05-05 ~ 2026-05-08)
+每日目标:    4 篇
+本周完成:    8 篇 (2026-05-05 ~ 2026-05-08)
 ```
 
 ---
