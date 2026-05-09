@@ -23,7 +23,7 @@
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 11 / 114 完成 (9.6%)**
+**总体: 14 / 114 完成 (12.3%)**
 
 ---
 
@@ -50,6 +50,9 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
+| 2026-05-09 | **GigaWorld-Policy** — Efficient Action-Centered WAM (arXiv'26.03) | Single-backbone | [笔记](papers/single-backbone/gigaworld-policy.md) |
+| 2026-05-09 | **DreamZero** — World Action Models are Zero-shot Policies (arXiv'26.02) | Single-backbone | [笔记](papers/single-backbone/dreamzero.md) |
+| 2026-05-09 | **Cosmos Policy** — Fine-Tuning Video Models for Control and Planning (arXiv'26.01) | Single-backbone | [笔记](papers/single-backbone/cosmos-policy.md) |
 | 2026-05-09 | **VideoPolicy** — Video Generators are Robot Policies (arXiv'25.08) | Single-backbone | [笔记](papers/single-backbone/videopolicy.md) |
 | 2026-05-08 | **UD-VLA** — Unified Diffusion VLA via JD3P (ICLR'26) | Single-backbone | [笔记](papers/single-backbone/ud-vla.md) |
 | 2026-05-08 | **VideoVLA** — Video Generators Can Be Generalizable Robot Manipulators (NeurIPS'25) | Single-backbone | [笔记](papers/single-backbone/videovla.md) |
