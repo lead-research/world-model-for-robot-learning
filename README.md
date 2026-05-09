@@ -13,7 +13,7 @@
 | 分类 | 进度 | 状态 |
 |------|------|------|
 | 🔬 Latent-space World Modeling | **6 / 6** | ✅ **已完成** |
-| 🏗️ Single-backbone Policies | **4 / 8** | 🟡 **当前进行中** |
+| 🏗️ Single-backbone Policies | **5 / 8** | 🟡 **当前进行中** |
 | 🎯 IDM-style Policies | 0 / 12 | ⚪ 待启动 |
 | 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待启动 |
 | 🔗 Unified VLA | 0 / 12 | ⚪ 待启动 |
@@ -23,7 +23,7 @@
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 10 / 114 完成 (8.8%)**
+**总体: 11 / 114 完成 (9.6%)**
 
 ---
 
@@ -50,6 +50,7 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
+| 2026-05-09 | **VideoPolicy** — Video Generators are Robot Policies (arXiv'25.08) | Single-backbone | [笔记](papers/single-backbone/videopolicy.md) |
 | 2026-05-08 | **UD-VLA** — Unified Diffusion VLA via JD3P (ICLR'26) | Single-backbone | [笔记](papers/single-backbone/ud-vla.md) |
 | 2026-05-08 | **VideoVLA** — Video Generators Can Be Generalizable Robot Manipulators (NeurIPS'25) | Single-backbone | [笔记](papers/single-backbone/videovla.md) |
 | 2026-05-08 | **UWM** — Unified World Models (RSS'25) | Single-backbone | [笔记](papers/single-backbone/uwm.md) |
@@ -96,4 +97,4 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 ---
 
-*Last updated: 2026-05-08 by Lead*
+*Last updated: 2026-05-09 by Lead*
