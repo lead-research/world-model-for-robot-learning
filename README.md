@@ -13,7 +13,7 @@
 | 分类 | 进度 | 状态 |
 |------|------|------|
 | 🔬 Latent-space World Modeling | **6 / 6** | ✅ **已完成** |
-| 🏗️ Single-backbone Policies | **5 / 8** | 🟡 **当前进行中** |
+| 🏗️ Single-backbone Policies | **8 / 8** | ✅ **已完成** |
 | 🎯 IDM-style Policies | 0 / 12 | ⚪ 待启动 |
 | 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待启动 |
 | 🔗 Unified VLA | 0 / 12 | ⚪ 待启动 |
@@ -31,7 +31,7 @@
 
 ```
 Phase 1: Latent-space WM (6篇)     ──────── ✅ 已完成 (2026-05-05 ~ 2026-05-07)
-Phase 2: Single-backbone (8篇)     ──────── 🟡 当前进行中 (4/8, ~2天)
+Phase 2: Single-backbone (8篇)     ──────── ✅ 已完成 (8/8, 2026-05-09)
 Phase 3: IDM-style (12篇)          ──────── ⚪ 待启动 (~3天)
 Phase 4: MoE/MoT-style (9篇)       ──────── ⚪ 待启动 (~3天)
 Phase 5: Unified VLA (12篇)        ──────── ⚪ 待启动 (~3天)
