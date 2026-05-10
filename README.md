@@ -14,7 +14,7 @@
 |------|------|------|
 | 🔬 Latent-space World Modeling | **6 / 6** | ✅ **已完成** |
 | 🏗️ Single-backbone Policies | **8 / 8** | ✅ **已完成** |
-| 🎯 IDM-style Policies | 0 / 12 | ⚪ 待启动 |
+| 🎯 IDM-style Policies | **0 / 12** | 🔄 **当前进行** |
 | 🧩 MoE/MoT-style | 0 / 9 | ⚪ 待启动 |
 | 🔗 Unified VLA | 0 / 12 | ⚪ 待启动 |
 | 🎮 World Model for RL | 0 / 16 | ⚪ 待启动 |
@@ -50,6 +50,10 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
+| 2026-05-10 | **VPP** — Video Prediction Policy (ICML'25 Spotlight) | IDM-style | [笔记](papers/idm-style/vpp.md) |
+| 2026-05-10 | **VidMan** — Exploiting Implicit Dynamics from Video Diffusion (NeurIPS'24) | IDM-style | [笔记](papers/idm-style/vidman.md) |
+| 2026-05-10 | **GR-1** — Large-Scale Video Generative Pre-training (ICLR'24) | IDM-style | [笔记](papers/idm-style/gr-1.md) |
+| 2026-05-10 | **UniPi** — Learning Universal Policies via Text-Guided Video Generation (NeurIPS'23) | IDM-style | [笔记](papers/idm-style/unipi.md) |
 | 2026-05-09 | **GigaWorld-Policy** — Efficient Action-Centered WAM (arXiv'26.03) | Single-backbone | [笔记](papers/single-backbone/gigaworld-policy.md) |
 | 2026-05-09 | **DreamZero** — World Action Models are Zero-shot Policies (arXiv'26.02) | Single-backbone | [笔记](papers/single-backbone/dreamzero.md) |
 | 2026-05-09 | **Cosmos Policy** — Fine-Tuning Video Models for Control and Planning (arXiv'26.01) | Single-backbone | [笔记](papers/single-backbone/cosmos-policy.md) |

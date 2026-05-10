@@ -25,31 +25,39 @@
 
 ## 当前活跃分类
 
-### 🏗️ Single-backbone Policies (8篇 | 5/8完成)
+### 🏗️ Single-backbone Policies (8/8 ✅ 已完成)
 
 | # | 论文 | 会议 | 状态 | 笔记 | 日期 |
 |---|------|------|------|------|------|
 | 1 | UVA — Unified Video Action Model | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uva.md) | 2026-05-08 |
-| 2 | **UWM — Unified World Models** | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uwm.md) | 2026-05-08 |
-| 3 | **VideoVLA — Video Generators Can Be Generalizable Robot Manipulators** | NeurIPS'25 | ✅ 完成 | [笔记](../papers/single-backbone/videovla.md) | 2026-05-08 |
-| 4 | **UD-VLA — Unified Diffusion VLA** | ICLR'26 | ✅ 完成 | [笔记](../papers/single-backbone/ud-vla.md) | 2026-05-08 |
-| 5 | **VideoPolicy — Video Generators are Robot Policies** | arXiv'25.08 | ✅ 完成 | [笔记](../papers/single-backbone/videopolicy.md) | 2026-05-09 |
-| 6 | Cosmos Policy | arXiv'26.01 | ⏳ | — | — |
-| 7 | DreamZero (WAM) | arXiv'26.02 | ⏳ | — | — |
-| 8 | GigaWorld-Policy | arXiv'26.03 | ⏳ | — | — |
+| 2 | UWM — Unified World Models | RSS'25 | ✅ 完成 | [笔记](../papers/single-backbone/uwm.md) | 2026-05-08 |
+| 3 | VideoVLA — Video Generators Can Be Generalizable Robot Manipulators | NeurIPS'25 | ✅ 完成 | [笔记](../papers/single-backbone/videovla.md) | 2026-05-08 |
+| 4 | UD-VLA — Unified Diffusion VLA | ICLR'26 | ✅ 完成 | [笔记](../papers/single-backbone/ud-vla.md) | 2026-05-08 |
+| 5 | VideoPolicy — Video Generators are Robot Policies | arXiv'25.08 | ✅ 完成 | [笔记](../papers/single-backbone/videopolicy.md) | 2026-05-09 |
+| 6 | Cosmos Policy — Fine-Tuning Video Models for Visuomotor Control | arXiv'26.01 | ✅ 完成 | [笔记](../papers/single-backbone/cosmos-policy.md) | 2026-05-09 |
+| 7 | DreamZero (WAM) — World Action Models are Zero-shot Policies | arXiv'26.02 | ✅ 完成 | [笔记](../papers/single-backbone/dreamzero.md) | 2026-05-09 |
+| 8 | GigaWorld-Policy — Efficient Action-Centered WAM | arXiv'26.03 | ✅ 完成 | [笔记](../papers/single-backbone/gigaworld-policy.md) | 2026-05-09 |
 
 ---
 
-## 待启动分类
+## 当前活跃分类
 
-### 🎯 IDM-style Policies (12篇)
-### 🧩 MoE/MoT-style (9篇)
-### 🔗 Unified VLA (12篇)
-### 🎮 WM for RL (16篇)
-### 📏 WM for Evaluation (10篇)
-### 🎬 Video Generation (25篇)
-### 📋 Benchmarks (8篇)
-### 🗂️ Datasets (8篇)
+### 🎯 IDM-style Policies (12篇 | 4/12进行中)
+
+| # | 论文 | 会议 | 状态 | 笔记 | 日期 |
+|---|------|------|------|------|------|
+| 1 | **UniPi** — Learning Universal Policies via Text-Guided Video Generation | NeurIPS'23 | ✅ 完成 | [笔记](../papers/idm-style/unipi.md) | 2026-05-10 |
+| 2 | **GR-1** — Unleashing Large-Scale Video Generative Pre-training | ICLR'24 | ✅ 完成 | [笔记](../papers/idm-style/gr-1.md) | 2026-05-10 |
+| 3 | **VidMan** — Exploiting Implicit Dynamics from Video Diffusion | NeurIPS'24 | ✅ 完成 | [笔记](../papers/idm-style/vidman.md) | 2026-05-10 |
+| 4 | **VPP** — Video Prediction Policy | ICML'25 | ✅ 完成 | [笔记](../papers/idm-style/vpp.md) | 2026-05-10 |
+| 5 | Gen2Act — Human Video Generation Enables Generalizable Manipulation | CoRL'25 | ⏳ 待读 | — | — |
+| 6 | V2A — Grounding Video Models to Actions | ICLR'25 | ⏳ 待读 | — | — |
+| 7 | Video2Act — Dual-System Video Diffusion Policy | arXiv'25.12 | ⏳ 待读 | — | — |
+| 8 | mimic-video — Video-Action Models Beyond VLAs | arXiv'25.12 | ⏳ 待读 | — | — |
+| 9 | LVP — Large Video Planner | arXiv'25.12 | ⏳ 待读 | — | — |
+| 10 | Vidarc — Embodied Video Diffusion Model | arXiv'25.12 | ⏳ 待读 | — | — |
+| 11 | TC-IDM — Grounding Video Generation for Zero-shot Motion | arXiv'26.01 | ⏳ 待读 | — | — |
+| 12 | Say, Dream, and Act — Learning Video World Models | arXiv'26.02 | ⏳ 待读 | — | — |
 
 *(完整列表见 [papers.md](../README.md) 或分类目录)*
 
@@ -58,15 +66,15 @@
 ## 学习统计
 
 ```
-已完成:      14 篇 (12.3%)
+已完成:      18 篇 (15.8%)
 进行中:      0 篇
-待读:      100 篇
+待读:       96 篇
 
 分类完成:    2 / 10
-当前分类:    Single-backbone Policies (8/8 ✅)
+当前分类:    🎯 IDM-style Policies (4/12)
 
 每日目标:    4 篇
-本周完成:    12 篇 (2026-05-05 ~ 2026-05-09)
+本周完成:    18 篇 (2026-05-05 ~ 2026-05-10)
 ```
 
 ---

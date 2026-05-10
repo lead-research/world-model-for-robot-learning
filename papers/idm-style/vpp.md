@@ -1,16 +1,43 @@
-# VPP
+## VPP — Video Prediction Policy: A Generalist Robot Policy with Predictive Visual Representations [ICML'25 Spotlight]
 
-> Video Prediction Policy: A Generalist Robot Policy with Predictive Visual Representations
-> Venue: ICML'25
+- **链接**: https://arxiv.org/abs/2412.14803
+- **代码**: https://github.com/roboterax/video-prediction-policy
+- **项目**: https://video-prediction-policy.github.io/
+- **分类**: IDM-style Policies
+- **核心问题**: 如何利用视频扩散模型的预测视觉表示（包含当前静态信息和预测的未来动力学）来指导机器人动作学习？
+
+### 核心方法
+- 提出 **VPP**，学习以视频扩散模型内部预测的未来表示为条件的**隐式逆动力学模型**。
+- **假设**: VDM 在预测未来帧时产生的内部表征同时包含当前静态信息和未来动力学信息。
+- 在机器人数据集和**互联网人类操作数据**上微调预训练视频基础模型。
+- 动作预测以 VDM 的内部未来表示为条件，而非以生成的像素为条件。
+
+### 关键洞察
+1. **VDM 内部表征 > 像素输出**: 视频扩散模型的中间表征比最终像素输出包含更丰富的结构化信息。
+2. **预测表示包含动态规划**: VDM 在生成未来帧时隐式执行了规划，其内部状态编码了最优路径信息。
+3. **互联网人类数据的价值**: 引入互联网人类操作视频微调 VDM，增强对人类操作模式的理解。
+
+### 技术细节
+- **视频基础模型**: 预训练视频扩散模型（如 Stable Video Diffusion）。
+- **微调数据**: 机器人轨迹数据 + 互联网人类操作视频。
+- **条件表示提取**: 从 VDM 的未来预测分支中提取内部表征 h_pred。
+- **动作解码**: 以 h_pred 为条件，通过 MLP 或小型 Transformer 解码动作序列。
+
+### 实验结果
+- **CALVIN ABC-D 泛化**: 相比之前 SOTA **18.6% 相对提升**。
+- **真实世界灵巧操作**: 成功率提升 **31.6%**。
+- 预测视觉表示显著优于仅使用当前观测的表示。
+
+### 局限性
+1. 微调大型视频扩散模型计算成本高。
+2. VDM 哪一层表示最适合动作预测？未充分探索。
+3. 人类视频与机器人操作之间存在 embodiment 差距。
+
+### 研究启示
+- 在我们的视频扩散策略中尝试以内部表征而非像素为条件进行动作解码。
+- 收集实验室的人类操作视频，验证人类数据对 VDM 微调的增益。
+- 系统分析 VDM 不同层表征对动作预测的贡献。
 
 ---
 
-## 基本信息
-
-- **arXiv**: https://arxiv.org/abs/2412.14803
-- **Code**: https://github.com/roboterax/video-prediction-policy
-- **Project**: —
-
-## 待读笔记
-
-（待补充深度分析）
+*Analyzed by Lead | 2026-05-10*

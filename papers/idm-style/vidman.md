@@ -1,16 +1,41 @@
-# VidMan
+## VidMan — Exploiting Implicit Dynamics from Video Diffusion Model for Effective Robot Manipulation [NeurIPS'24]
 
-> VidMan: Exploiting Implicit Dynamics from Video Diffusion Model for Effective Robot Manipulation
-> Venue: NeurIPS'24
+- **链接**: https://arxiv.org/abs/2411.09153
+- **代码**: https://github.com/jirufengyu/VidMan
+- **项目**: https://jirufengyu.github.io/VidMan/
+- **分类**: IDM-style Policies
+- **核心问题**: 如何利用视频扩散模型中的隐式动力学知识来提升机器人操作的动作预测精度？
+
+### 核心方法
+- 提出 **VidMan**，受神经科学**双过程理论**启发的两阶段训练框架。
+- **Stage 1（系统1 - 直觉）**: 在 OXE 数据集上预训练视频扩散模型预测未来视觉轨迹，学习环境动力学。
+- **Stage 2（系统2 - 推理）**: 引入**逐层自注意力适配器**，通过参数共享将 VidMan 转化为逆动力学模型。
+- 视频预测和动作预测通过**参数共享**关联。
+
+### 关键洞察
+1. **视频扩散模型蕴含动力学知识**: 视频扩散模型在去噪过程中学习到的内部表征包含丰富的物理动力学信息。
+2. **双过程理论的AI实现**: System 1（视频预测）+ System 2（动作适配）。
+3. **逐层适配器 > 独立动作头**: 在视频扩散网络每一层插入轻量自注意力模块，更有效地利用视频表征。
+
+### 技术细节
+- **视频扩散骨干**: 基于扩散模型的视频预测网络，在 OXE 上预训练。
+- **逐层自注意力适配器**: 在视频 U-Net 每层解码器中加入轻量自注意力模块。
+- **训练目标**: Stage 1: 视频去噪；Stage 2: 动作适配器以视频中间特征为条件。
+
+### 实验结果
+- **CALVIN**: 相比 GR-1 实现 **11.7% 相对提升**。
+- **OXE 小规模数据集**: **>9% 精度提升**。
+- 世界模型显著增强机器人动作预测精度。
+
+### 局限性
+1. 以视频扩散为骨干，推理速度可能较慢。
+2. 轻量适配器可能限制动作表达复杂度。
+3. OXE 数据以桌面操作为主，可能限制泛化。
+
+### 研究启示
+- 在扩散策略框架中加入逐层自注意力适配器，测试与独立动作头的性能差异。
+- 分析视频扩散模型中间层注意力图，验证是否编码物理动力学信息。
 
 ---
 
-## 基本信息
-
-- **arXiv**: https://arxiv.org/abs/2411.09153
-- **Code**: https://github.com/jirufengyu/VidMan
-- **Project**: https://jirufengyu.github.io/VidMan/
-
-## 待读笔记
-
-（待补充深度分析）
+*Analyzed by Lead | 2026-05-10*

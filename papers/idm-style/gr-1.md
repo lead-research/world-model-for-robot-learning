@@ -1,16 +1,41 @@
-# GR-1
+## GR-1 — Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation [ICLR'24]
 
-> Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation
-> Venue: ICLR'24
+- **链接**: https://arxiv.org/abs/2312.13139
+- **代码**: https://github.com/bytedance/GR-1
+- **项目**: https://gr1-manipulation.github.io/
+- **分类**: IDM-style Policies / Unified VLA
+- **核心问题**: 如何利用大规模视频生成预训练来提升视觉机器人操作的性能和泛化能力？
+
+### 核心方法
+- 提出 **GR-1**，一个简洁的 **GPT 风格 Transformer**，端到端同时预测未来图像和机器人动作。
+- 输入：语言指令 + 观测图像序列 + 机器人状态序列。
+- 输出：机器人动作序列 + 未来图像序列（联合预测）。
+- 先在**大规模视频数据集**上进行生成预训练，然后在机器人数据上微调。
+
+### 关键洞察
+1. **视频生成预训练的价值**: 大规模视频预训练学习到的视觉动力学表示显著优于静态视觉预训练。
+2. **GPT 架构的通用性**: 简单的自回归 Transformer 足以联合建模语言、视觉和动作。
+3. **生成式预训练 → 判别式微调**: 先在生成任务（视频预测）上预训练，再在控制任务上微调，迁移效果显著。
+
+### 技术细节
+- **架构**: GPT 风格 Transformer，自回归生成。
+- **输入序列**: [语言指令 token] + [图像 patch token] + [状态 token]
+- **输出**: [动作 token] + [未来图像 patch token]
+
+### 实验结果
+- **CALVIN**: 成功率从 88.9% → **94.9%**。
+- **零样本未见过场景泛化**: 53.3% → **85.4%**。
+- 真实机器人实验展现强泛化潜力。
+
+### 局限性
+1. 端到端生成动作可能不如显式逆动力学模型精确。
+2. 预测的未来图像可能模糊或物理不一致。
+3. 自回归生成在推理时速度较慢。
+
+### 研究启示
+- 在我们的 VLA 框架中引入视频预训练阶段，利用 AgiBot 等数据预训练视觉动力学。
+- 用 GPT 风格架构替代 Diffusion/VAE 架构，测试长程任务性能差异。
 
 ---
 
-## 基本信息
-
-- **arXiv**: https://arxiv.org/abs/2312.13139
-- **Code**: https://github.com/bytedance/GR-1
-- **Project**: https://gr1-manipulation.github.io/
-
-## 待读笔记
-
-（待补充深度分析）
+*Analyzed by Lead | 2026-05-10*
