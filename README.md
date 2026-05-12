@@ -32,7 +32,7 @@
 ```
 Phase 1: Latent-space WM (6篇)     ──────── ✅ 已完成 (2026-05-05 ~ 2026-05-07)
 Phase 2: Single-backbone (8篇)     ──────── ✅ 已完成 (8/8, 2026-05-09)
-Phase 3: IDM-style (12篇)          ──────── ⚪ 待启动 (~3天)
+Phase 3: IDM-style (12篇)          ──────── 🔄 进行中 (8/12完成, 4篇待读, 2026-05-12)
 Phase 4: MoE/MoT-style (9篇)       ──────── ⚪ 待启动 (~3天)
 Phase 5: Unified VLA (12篇)        ──────── ⚪ 待启动 (~3天)
 Phase 6: WM for RL (16篇)          ──────── ⚪ 待启动 (~4天)
@@ -50,6 +50,10 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 | 日期 | 论文 | 分类 | 链接 |
 |------|------|------|------|
+| 2026-05-12 | **mimic-video** — Video-Action Models Beyond VLAs (arXiv'25.12) | IDM-style | [笔记](papers/idm-style/mimic-video.md) |
+| 2026-05-12 | **Video2Act** — Dual-System Video Diffusion Policy (arXiv'25.12) | IDM-style | [笔记](papers/idm-style/video2act.md) |
+| 2026-05-12 | **V2A** — Grounding Video Models to Actions (ICLR'25) | IDM-style | [笔记](papers/idm-style/v2a.md) |
+| 2026-05-12 | **Gen2Act** — Human Video Generation for Manipulation (CoRL'25) | IDM-style | [笔记](papers/idm-style/gen2act.md) |
 | 2026-05-10 | **VPP** — Video Prediction Policy (ICML'25 Spotlight) | IDM-style | [笔记](papers/idm-style/vpp.md) |
 | 2026-05-10 | **VidMan** — Exploiting Implicit Dynamics from Video Diffusion (NeurIPS'24) | IDM-style | [笔记](papers/idm-style/vidman.md) |
 | 2026-05-10 | **GR-1** — Large-Scale Video Generative Pre-training (ICLR'24) | IDM-style | [笔记](papers/idm-style/gr-1.md) |

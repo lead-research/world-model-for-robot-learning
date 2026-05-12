@@ -2,7 +2,7 @@
 
 > 每日更新，追踪每篇论文的学习状态
 > 
-> **总计: 114 篇 | 已完成: 14 | 待读: 100**
+> **总计: 114 篇 | 已完成: 22 | 进行中: 0 | 待读: 92**
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## 当前活跃分类
 
-### 🎯 IDM-style Policies (12篇 | 4/12进行中)
+### 🎯 IDM-style Policies (12篇 | 8/12完成)
 
 | # | 论文 | 会议 | 状态 | 笔记 | 日期 |
 |---|------|------|------|------|------|
@@ -50,10 +50,10 @@
 | 2 | **GR-1** — Unleashing Large-Scale Video Generative Pre-training | ICLR'24 | ✅ 完成 | [笔记](../papers/idm-style/gr-1.md) | 2026-05-10 |
 | 3 | **VidMan** — Exploiting Implicit Dynamics from Video Diffusion | NeurIPS'24 | ✅ 完成 | [笔记](../papers/idm-style/vidman.md) | 2026-05-10 |
 | 4 | **VPP** — Video Prediction Policy | ICML'25 | ✅ 完成 | [笔记](../papers/idm-style/vpp.md) | 2026-05-10 |
-| 5 | Gen2Act — Human Video Generation Enables Generalizable Manipulation | CoRL'25 | ⏳ 待读 | — | — |
-| 6 | V2A — Grounding Video Models to Actions | ICLR'25 | ⏳ 待读 | — | — |
-| 7 | Video2Act — Dual-System Video Diffusion Policy | arXiv'25.12 | ⏳ 待读 | — | — |
-| 8 | mimic-video — Video-Action Models Beyond VLAs | arXiv'25.12 | ⏳ 待读 | — | — |
+| 5 | **Gen2Act** — Human Video Generation Enables Generalizable Manipulation | CoRL'25 | ✅ 完成 | [笔记](../papers/idm-style/gen2act.md) | 2026-05-12 |
+| 6 | **V2A** — Grounding Video Models to Actions | ICLR'25 | ✅ 完成 | [笔记](../papers/idm-style/v2a.md) | 2026-05-12 |
+| 7 | **Video2Act** — Dual-System Video Diffusion Policy | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/video2act.md) | 2026-05-12 |
+| 8 | **mimic-video** — Video-Action Models Beyond VLAs | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/mimic-video.md) | 2026-05-12 |
 | 9 | LVP — Large Video Planner | arXiv'25.12 | ⏳ 待读 | — | — |
 | 10 | Vidarc — Embodied Video Diffusion Model | arXiv'25.12 | ⏳ 待读 | — | — |
 | 11 | TC-IDM — Grounding Video Generation for Zero-shot Motion | arXiv'26.01 | ⏳ 待读 | — | — |
@@ -66,15 +66,15 @@
 ## 学习统计
 
 ```
-已完成:      18 篇 (15.8%)
-进行中:      4 篇
+已完成:      22 篇 (19.3%)
+进行中:      0 篇
 待读:       92 篇
 
 分类完成:    2 / 10
-当前分类:    🎯 IDM-style Policies (4/12完成, 4/12进行中)
+当前分类:    🎯 IDM-style Policies (8/12完成, 4篇待读)
 
 每日目标:    4 篇
-本周完成:    18 篇 (2026-05-05 ~ 2026-05-12)
+本周完成:    22 篇 (2026-05-05 ~ 2026-05-12)
 ```
 
 ---

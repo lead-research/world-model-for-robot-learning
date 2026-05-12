@@ -1,16 +1,93 @@
-# mimic-video
+# mimic-video — Video-Action Models for Generalizable Robot Control Beyond VLAs
 
-> mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs
-> Venue: arXiv'25.12
+> **arXiv**: [2512.15692](https://arxiv.org/abs/2512.15692)
+> **项目页**: [https://mimic-video.github.io/](https://mimic-video.github.io/)
+> **分类**: IDM-style Policies / Video-Action Model (VAM) 新范式
 
 ---
 
-## 基本信息
+## 核心问题
 
-- **arXiv**: https://arxiv.org/abs/2512.15692
-- **Code**: —
-- **Project**: https://mimic-video.github.io/
+VLA基于静态图像-文本预训练，缺乏物理动态理解；能否利用互联网视频预训练（同时编码语义+动态）将策略学习负担从"动作解码"转移到"视频理解与规划"？
 
-## 待读笔记
+## 核心方法
 
-（待补充深度分析）
+将预训练互联网规模视频扩散模型（Cosmos-Predict2）与轻量级Flow Matching动作解码器耦合：
+- 视频模型通过**部分去噪**生成中间潜态表示作为视觉计划
+- 动作解码器以其为条件充当**逆动力学模型（IDM）**
+- 视频backbone冻结（仅LoRA微调），动作解码器从头训练
+
+## 主要特点
+
+- **视频-动作解耦**: 视频模型负责长程多模态规划（"做什么"），动作解码器负责单模态逆动力学（"怎么做"）
+- **无需完整视频生成**: 推理时只需去噪到中间flow time τ_v，提取中间层特征，避免逐帧视频合成开销
+- **Flow Matching统一框架**: 视频和动作均使用Conditional Flow Matching，独立flow schedule（τ_v和τ_a）
+- **10×样本效率**: 动作解码器仅需VLA基线10%的机器人数据
+
+## 与现有方法对比
+
+| 维度 | VLA (π0/π0.5) | **mimic-video (VAM)** |
+|------|---------------|----------------------|
+| 预训练模态 | 静态图像-文本 | 视频（动态+语义） |
+| 物理因果理解 | 有限 | 天然编码 |
+| 数据效率 | 需100%数据 | **10%达到同等性能** |
+| 收敛速度 | 基准 | **2×提升** |
+| 推理（τ_v=1） | 自回归生成语言计划 | 单次前向+去噪 |
+
+- **vs 像素级视频预测+IDM**: mimic-video在潜态空间操作，无需像素级重建
+- **vs World Model as Simulator**: VAM中视频模型是**非动作条件化**的，与典型action-conditioned world model不同
+
+## 关键洞察
+
+**"控制问题可归约为视觉预测问题"** —— Oracle实验（用真实未来视频潜态作为条件）证明：只要视频预测准确，动作解码几乎 trivial（接近100%）。策略性能上界主要取决于**视频模型的预测质量**。
+
+**不完全去噪反而更好**: τ_v=1（纯噪声输入）在实际推理中表现最佳，因为完全去噪会引入视频生成伪影，导致分布偏移。
+
+## 技术细节
+
+### 架构
+- **视频Backbone**: Cosmos-Predict2（2B参数DiT），3D tokenizer潜态视频扩散模型，T5编码语言指令
+- **Action Decoder**: DiT结构，每层包含对视频模型中间表示的cross-attention + 动作自注意力 + MLP
+
+### 训练损失
+- **视频**: CFM损失 L_CFM = E[||v_φ(z^τ, τ) - u_τ(z^τ|z^0)||²]
+- **动作**: CFM回归 E[||π_θ(a^{τ_a}, q, h^{τ_v}, τ_a, τ_v) - u_{τ_a}(a^{τ_a}|a^0)||²]
+
+### 推理
+τ_v=1时仅需视频backbone**单次前向** + 动作扩散去噪
+
+## 实验结果
+
+### SIMPLER-Bridge
+平均成功率SOTA，超过π0.5-style VLA、Octo、OpenVLA
+
+### LIBERO
+- Goal/Object/Spatial均优于π0.5-style VLA
+- 每任务仅1个episode（数据量减少98%）仍达**77%成功率**
+
+### 真实世界双手灵巧操作
+单视角超过多视角DiT-Block Policy基线
+
+### τ_v扫参
+| τ_v | 性能 | 说明 |
+|-----|------|------|
+| →0（完全去噪） | 下降 | 视频伪影导致分布偏移 |
+| **=1（纯噪声）** | **最佳** | **单次前向，无伪影** |
+
+## 局限性
+
+- 单视角限制
+- 未实现大规模跨具身统一模型
+- 真实世界任务多样性有限
+- 策略性能上界受限于视频模型质量
+- τ_v最优值任务相关，缺乏自动选择机制
+
+## 对研究的启示
+
+- **长程任务**: 高度可借鉴。视频模型天然擅长长程时序建模，VAM将长程规划外包给视频backbone
+- **家庭场景**: 适用性强。互联网视频包含大量日常活动先验，样本效率提升10×降低数据门槛
+- **直接可试**: 替换现有VLA backbone为Cosmos-Predict2，优先尝试τ_v=1配置
+
+---
+
+*笔记日期: 2026-05-12*
