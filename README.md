@@ -32,7 +32,7 @@
 ```
 Phase 1: Latent-space WM (6篇)     ──────── ✅ 已完成 (2026-05-05 ~ 2026-05-07)
 Phase 2: Single-backbone (8篇)     ──────── ✅ 已完成 (8/8, 2026-05-09)
-Phase 3: IDM-style (12篇)          ──────── 🔄 进行中 (8/12完成, 4篇待读, 2026-05-12)
+Phase 3: IDM-style (12篇)          ──────── 🔄 进行中 (10/12完成, 2篇待读, 2026-05-17)
 Phase 4: MoE/MoT-style (9篇)       ──────── ⚪ 待启动 (~3天)
 Phase 5: Unified VLA (12篇)        ──────── ⚪ 待启动 (~3天)
 Phase 6: WM for RL (16篇)          ──────── ⚪ 待启动 (~4天)
@@ -109,5 +109,4 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 ---
 
 *Last updated: 2026-05-12 by Lead*
--09 by Lead*
-2026-05-09 by Lead*
+*Last updated: 2026-05-17 by Lead*

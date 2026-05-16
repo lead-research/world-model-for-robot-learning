@@ -2,7 +2,7 @@
 
 > 每日更新，追踪每篇论文的学习状态
 > 
-> **总计: 114 篇 | 已完成: 22 | 进行中: 0 | 待读: 92**
+> **总计: 114 篇 | 已完成: 24 | 进行中: 0 | 待读: 90**
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## 当前活跃分类
 
-### 🎯 IDM-style Policies (12篇 | 8/12完成)
+### 🎯 IDM-style Policies (12篇 | 10/12完成)
 
 | # | 论文 | 会议 | 状态 | 笔记 | 日期 |
 |---|------|------|------|------|------|
@@ -54,8 +54,8 @@
 | 6 | **V2A** — Grounding Video Models to Actions | ICLR'25 | ✅ 完成 | [笔记](../papers/idm-style/v2a.md) | 2026-05-12 |
 | 7 | **Video2Act** — Dual-System Video Diffusion Policy | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/video2act.md) | 2026-05-12 |
 | 8 | **mimic-video** — Video-Action Models Beyond VLAs | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/mimic-video.md) | 2026-05-12 |
-| 9 | LVP — Large Video Planner | arXiv'25.12 | ⏳ 待读 | — | — |
-| 10 | Vidarc — Embodied Video Diffusion Model | arXiv'25.12 | ⏳ 待读 | — | — |
+| 9 | **LVP** — Large Video Planner Enables Generalizable Robot Control | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/lvp.md) | 2026-05-17 |
+| 10 | **Vidarc** — Embodied Video Diffusion Model for Closed-loop Control | arXiv'25.12 | ✅ 完成 | [笔记](../papers/idm-style/vidarc.md) | 2026-05-17 |
 | 11 | TC-IDM — Grounding Video Generation for Zero-shot Motion | arXiv'26.01 | ⏳ 待读 | — | — |
 | 12 | Say, Dream, and Act — Learning Video World Models | arXiv'26.02 | ⏳ 待读 | — | — |
 
@@ -66,20 +66,20 @@
 ## 学习统计
 
 ```
-已完成:      22 篇 (19.3%)
+已完成:      24 篇 (21.1%)
 进行中:      0 篇
-待读:       92 篇
+待读:       90 篇
 
 分类完成:    2 / 10
-当前分类:    🎯 IDM-style Policies (8/12完成, 4篇待读)
+当前分类:    🎯 IDM-style Policies (10/12完成, 2篇待读)
 
 每日目标:    4 篇
-本周完成:    22 篇 (2026-05-05 ~ 2026-05-12)
+本周完成:    2 篇 (2026-05-17)
 ```
 
 ---
 
-*最后更新: 2026-05-12*
+*最后更新: 2026-05-17*
 
 ---
 
