@@ -15,15 +15,15 @@
 | 🔬 Latent-space World Modeling | **6 / 6** | ✅ **已完成** |
 | 🏗️ Single-backbone Policies | **8 / 8** | ✅ **已完成** |
 | 🎯 IDM-style Policies | **12 / 12** | ✅ **已完成** |
-| 🧩 MoE/MoT-style | **6 / 9** | ✅ **已完成** (3篇为跨分类引用) |
+| 🧩 MoE/MoT-style | **9 / 9** | ✅ **已完成** |
 | 🔗 Unified VLA | **12 / 12** | ✅ **已完成** |
-| 🎮 World Model for RL | 0 / 16 | 🔄 **当前进行** |
-| 📏 World Model for Evaluation | 0 / 10 | ⚪ 待启动 |
+| 🎮 World Model for RL | **16 / 16** | ✅ **已完成** |
+| 📏 World Model for Evaluation | 0 / 10 | 🔄 **当前进行** |
 | 🎬 Video Generation | 0 / 25 | ⚪ 待启动 |
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 44 / 114 完成 (38.6%)**
+**总体: 60 / 114 完成 (52.6%)**
 
 ---
 
@@ -35,8 +35,8 @@ Phase 2: Single-backbone (8篇)     ──────── ✅ 已完成 (2026
 Phase 3: IDM-style (12篇)          ──────── ✅ 已完成 (2026-05-10 ~ 2026-05-22)
 Phase 4: MoE/MoT-style (9篇)        ──────── ✅ 已完成 (2026-05-22补课)
 Phase 5: Unified VLA (12篇)        ──────── ✅ 已完成 (2026-05-22补课)
-Phase 6: WM for RL (16篇)          ──────── 🔄 当前进行 (~4天)
-Phase 7: WM for Evaluation (10篇)  ──────── ⚪ 待启动 (~3天)
+Phase 6: WM for RL (16篇)          ──────── ✅ 已完成 (2026-05-30, 16篇)
+Phase 7: WM for Evaluation (10篇)  ──────── 🔄 当前进行
 Phase 8: Video Generation (25篇)    ──────── ⚪ 待启动 (~7天)
 Phase 9: Benchmarks (8篇)            ──────── ⚪ 待启动 (~2天)
 Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2天)
@@ -76,6 +76,26 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 | 2026-05-22 | **Motus** — A Unified Latent Action World Model (arXiv'25.12) | [笔记](papers/moe-mot/motus.md) |
 | 2026-05-12 | **mimic-video** — Video-Action Models Beyond VLAs (arXiv'25.12) | [笔记](papers/idm-style/mimic-video.md) |
 | 2026-05-07 | **WoG** — World Modeling in Condition Space (arXiv'26.02) | [笔记](papers/latent-space-wm/world-guidance-wog.md) |
+
+### World Model for RL (16/16 ✅)
+| 日期 | 论文 | 链接 |
+|------|------|------|
+| 2026-05-30 | **PlayWorld** — Learning Robot World Models from Autonomous Play (arXiv'26.03) | [笔记](papers/wm-for-rl/playworld.md) |
+| 2026-05-30 | **World-VLA-Loop** — Closed-Loop Learning of Video World Model and VLA Policy (arXiv'26.02) | [笔记](papers/wm-for-rl/world-vla-loop.md) |
+| 2026-05-30 | **WoVR** — World Models as Reliable Simulators for Post-Training VLA (arXiv'26.02) | [笔记](papers/wm-for-rl/wovr.md) |
+| 2026-05-30 | **GigaBrain-0.5M** — VLA That Learns From World Model-Based RL (arXiv'26.02) | [笔记](papers/wm-for-rl/gigabrain-0.5m.md) |
+| 2026-05-30 | **VLAW** — Iterative Co-Improvement of VLA Policy and World Model (arXiv'26.02) | [笔记](papers/wm-for-rl/vlaw.md) |
+| 2026-05-30 | **RISE** — Self-Improving Robot Policy with Compositional World Model (arXiv'26.02) | [笔记](papers/wm-for-rl/rise.md) |
+| 2026-05-30 | **World-Gymnast** — Training Robots with RL in a World Model (arXiv'26.02) | [笔记](papers/wm-for-rl/world-gymnast.md) |
+| 2026-05-30 | **RehearseVLA** — Simulated Post-Training for VLAs with WM (CVPR'26) | [笔记](papers/wm-for-rl/rehearsevla.md) |
+| 2026-05-30 | **WMPO** — World Model-based Policy Optimization for VLA (ICLR'26) | [笔记](papers/wm-for-rl/wmpo.md) |
+| 2026-05-30 | **ProphRL** — Reinforcing Action Policies by Prophesying (arXiv'25.11) | [笔记](papers/wm-for-rl/prophrl.md) |
+| 2026-05-30 | **VLA-RFT** — VLA Reinforcement Fine-tuning with Verified Rewards (arXiv'25.10) | [笔记](papers/wm-for-rl/vla-rft.md) |
+| 2026-05-30 | **World4RL** — Diffusion World Models for Policy Refinement with RL (arXiv'25.09) | [笔记](papers/wm-for-rl/world4rl.md) |
+| 2026-05-30 | **World-Env** — Leveraging World Model as a Virtual Environment for VLA Post-Training (arXiv'25.09) | [笔记](papers/wm-for-rl/world-env.md) |
+| 2026-05-30 | **DiWA** — Diffusion Policy Adaptation with World Models (CoRL'25) | [笔记](papers/wm-for-rl/diwa.md) |
+| 2026-05-30 | **UniSim** — Learning Interactive Real-World Simulators (ICLR'24) | [笔记](papers/wm-for-rl/unisim.md) |
+| 2026-05-30 | **DayDreamer** — World Models for Physical Robot Learning (CoRL'23) | [笔记](papers/wm-for-rl/daydreamer.md) |
 
 ### Unified VLA Models (12/12 ✅)
 | 日期 | 论文 | 链接 |
@@ -150,4 +170,4 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 ---
 
-*Last updated: 2026-05-22 by Lead*
+*Last updated: 2026-05-30 by Lead*
