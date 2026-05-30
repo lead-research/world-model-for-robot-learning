@@ -1,8 +1,8 @@
-# 🔬 Latent-space World Modeling 综述
+# Latent-space World Modeling 分类综述
 
-> 分类: Latent-space World Modeling  
-> 完成日期: 2026-05-07  
-> 论文数: 6 (全部完成)  
+> 分类: 🔬 Latent-space World Modeling
+> 完成日期: 2026-05-07
+> 论文数: 6
 > 状态: ✅ 已完成
 
 ---
@@ -30,25 +30,13 @@
    ↓
 2026.02: WoG — 在"条件空间"做世界建模，自动发现对动作最有用的未来信息
    ↓
-2026.03: DIAL — System-2/1结构化架构，latent intent作为可微分瓶颈
-```
+2026.03: LeWorldModel — 端到端稳定JEPA，仅用MSE+SIGReg，无需EMA/预训练/冻结，15M参数，48x规划速度
+        ↓
+2026.03: DIAL — System-2/1结构化架构，latent intent作为可微分瓶颈```
 
 ---
 
-## 六篇论文完整对比
-
-| 论文 | 核心思想 | 预测对象 | 架构改动 | 推理开销 | 数据效率 | 层次化 |
-|------|---------|---------|---------|---------|---------|--------|
-| **FLARE** | Future token alignment | Action-aware VL嵌入 | 小 (32 tokens) | **零** | 中 | ❌ |
-| **VLA-JEPA** | 完整JEPA预训练 | V-JEPA2 world states | 大 (target+predictor) | 中 | 高 | ⚠️ |
-| **VISTA** | 视觉子目标规划 | 视觉子目标图像 (goal images) | 中 | 中 (planning延迟) | **极高 (2h)** | ✅ 宏观 |
-| **JEPA-VLA** | V-JEPA2替换backbone | V-JEPA2视觉表征 | **极小** | 低 | 中 | ❌ |
-| **WoG** | Condition space预测 | Action conditions | 中 | 低 | 中 | ❌ |
-| **DIAL** | System-2/1意图瓶颈 | VLM feature space foresight | 大 | 中 | **极高 (10x)** | ⚠️ 微观 |
-
----
-
-## 方法子分类
+## 方法分类
 
 ### 按"隐空间预测的目标"
 
@@ -59,20 +47,21 @@
 | **Visual Subgoal** | VISTA | 视觉子目标图像 | 显式层次化，可解释 |
 | **Video Predictive Embedding** | JEPA-VLA | V-JEPA2视觉表征 | 即插即用，改backbone |
 | **Condition Space** | WoG | Action conditions | 自发现冗余剔除 |
-| **Latent Intent** | DIAL | VLM feature space foresight | 结构化认知瓶颈 |
+| **Stable JEPA** | LeWorldModel | 高斯约束隐嵌入 | 端到端，无需启发式，理论保证 |
 
 ### 按"架构侵入性"
 
 | 侵入性 | 论文 | 改动 |
 |--------|------|------|
-| **极低** | JEPA-VLA | 替换vision encoder |
+| **极低** | LeWorldModel | 纯Encoder+Predictor，联合训练 |
+| **低** | JEPA-VLA | 替换vision encoder |
 | **低** | FLARE | 添加32个future tokens |
 | **中** | VISTA, WoG | 新增模块/两阶段训练 |
 | **高** | VLA-JEPA, DIAL | 完整新架构 |
 
 ---
 
-## 共同发现 / 领域共识
+## 共同发现 / 共识
 
 1. **像素重建是死路**：6篇全部避免逐像素预测
 2. **人类视频是共享杠杆**：全部支持从人类视频学习（无需动作标签）
@@ -88,9 +77,26 @@
 |--------|-------|-------|---------|
 | **显式 vs 隐式** | VISTA: 显式视觉子目标（可解释，有延迟） | FLARE/JEPA-VLA: 纯隐式（高效，黑盒） | 能否兼得？ |
 | **Backbone替换 vs 增强** | JEPA-VLA: 替换vision encoder | FLARE/WoG: 在现有架构上增强 | 最佳组合？ |
-| **层次化 vs 端到端** | VISTA: 宏观层次化 | DIAL: 微观结构化端到端 | 长程任务最佳架构？ |
+| **层次化 vs 端到端** | VISTA: 宏观层次化 | DIAL: 微观结构化端到端 | 长程任务的最佳架构？ |
 | **人类视频比例** | VLA-JEPA: 人类视频提升鲁棒性但可能引入噪声 | FLARE: 人类视频显著提升低数据场景 | 最优混合比例？ |
-| **噪声鲁棒性** | π0在Noise扰动上领先JEPA类(-12.7%) | JEPA类在外观变化上大幅领先 | 如何兼得两者？ |
+| **预训练依赖** | LeWorldModel: 无需预训练，纯端到端 | JEPA-VLA/VLA-JEPA: 依赖V-JEPA2预训练 | 哪种更好？取决于数据和算力 |
+| **JEPA稳定性** | LeWorldModel: SIGReg理论保证 | 其他: EMA/冻结/辅助监督 | LeWM是突破？还是牺牲了表征质量？ |
+
+---
+
+## 对后续分类的启示
+
+### Latent-space WM → Single-backbone Policies
+- Single-backbone（UVA, UWM, VideoVLA等）将视频和动作在同一个backbone中联合建模
+- **关键问题**: UWM等做显式VAE latent预测，而Latent-space WM已证明隐式对齐更高效——这提示Single-backbone方向可能需要"隐式化"
+
+### Latent-space WM → World Model for RL
+- WM for RL（DayDreamer, UniSim, DiWA等）用世界模型做想象rollout
+- **关键问题**: Latent-space的隐表征能否直接作为RL的state space？VLA-JEPA的world states可能是理想候选
+
+### Latent-space WM → Unified VLA
+- Unified VLA（GR-2, DreamVLA, UniVLA等）将世界建模作为多模态backbone训练目标
+- **关键问题**: Latent-space WM的技术（JEPA, condition space, intent bottleneck）能否直接融入Unified VLA的预训练目标？
 
 ---
 
@@ -108,34 +114,146 @@
 | Q-former Condition Encoder | WoG | 自动发现action-relevant conditions |
 | Two-Stage Curriculum | WoG, DIAL | 稳定训练复杂架构 |
 | Latent Inverse Dynamics | DIAL | 从意图到动作的硬瓶颈映射 |
+| SIGReg (高斯约束防崩溃) | LeWorldModel | 替换EMA/冻结，简化JEPA训练 |
 | Decoupled Warmup | DIAL | 防止多模块联合训练的梯度冲突 |
 
 ---
 
-## 研究机会（Gaps）
+## 研究机会（ gaps ）
 
 1. **层次化 + 结构化的组合**：VISTA的宏观层次化 + DIAL的微观结构化 = 完整长程方案，尚无论文实现
 2. **JEPA-VLA + FLARE叠加**：JEPA-VLA做backbone + FLARE做future alignment，预期协同增益
 3. **家庭场景验证**：6篇全部在实验室桌面/仿真验证，真实家庭场景（clutter, 动态, 开放词汇）是空白
 4. **RL后训练**：全部仅imitation learning，未探索RL在latent space中的后训练
 5. **多步未来预测**：FLARE/VLA-JEPA等仅单步/短horizon，长程需要层次化多步预测
+6. **LeWM在真实机器人上的验证**：LeWM仅在2D/3D控制环境验证，真实机器人操作（如VLA场景）是巨大空白
 
 ---
 
-## 后续分类关联
-
-### Latent-space WM → Single-backbone Policies
-- Single-backbone（UVA, UWM, VideoVLA等）将视频和动作在同一个backbone中联合建模
-- **关键问题**: UWM等做显式VAE latent预测，而Latent-space WM已证明隐式对齐更高效——提示Single-backbone方向可能需要"隐式化"
-
-### Latent-space WM → World Model for RL
-- WM for RL（DayDreamer, UniSim, DiWA等）用世界模型做想象rollout
-- **关键问题**: Latent-space的隐表征能否直接作为RL的state space？VLA-JEPA的world states可能是理想候选
-
-### Latent-space WM → Unified VLA
-- Unified VLA（GR-2, DreamVLA, UniVLA等）将世界建模作为多模态backbone训练目标
-- **关键问题**: Latent-space WM的技术（JEPA, condition space, intent bottleneck）能否直接融入Unified VLA的预训练目标？
 
 ---
 
-*综述日期: 2026-05-07 | 作者: Lead*
+# World Model for RL 分类综述
+
+> 分类: 🎮 World Model for RL
+> 完成日期: 2026-05-30
+> 论文数: 16
+> 状态: ✅ 已完成
+
+---
+
+## 一句话总结这个方向
+
+**用数据驱动的world model替代真实环境/软件仿真器，在"想象"中进行RL策略优化。** 核心共识：world model + RL 是突破模仿学习数据瓶颈的终极路径，2025-2026年围绕VLA的爆发式涌现。
+
+---
+
+## 技术演化全景
+
+```
+2023: DayDreamer — 在线RSSM学习，真实机器人1小时学会行走（可行性验证）
+   ↓
+2024: UniSim — 多数据集编排，通用交互模拟器（大规模预训练）
+   ↓
+2025上: DiWA — 离线world model + RL微调diffusion policy（离线优化）
+   ↓
+2025下-2026上: VLA后训练爆发 — World-Env/VLA-RFT/WMPO/ProphRL/WoVR/World-Gymnast（VLA+RL）
+   ↓
+2026: 共进化与自主数据 — VLAW/World-VLA-Loop/WoVR/PlayWorld（动态改进+数据革命）
+```
+
+---
+
+## 方法分类
+
+### 按"World Model类型"
+
+| 子类型 | 代表 | 预测什么 | 特点 |
+|--------|------|---------|------|
+| **隐空间 (RSSM)** | DayDreamer | Latent states | 高效，与VLA视觉不兼容 |
+| **像素级 (Video)** | WMPO, World-Gymnast | Future RGB frames | 与VLA视觉预训练对齐，开销大 |
+| **扩散模型** | World4RL | 扩散去噪视频 | 高保真，推理慢 |
+| **组合式** | RISE | 动力学+值模型分离 | 各组件最优，系统复杂 |
+| **动作→视频** | Prophet (ProphRL) | 动作条件视频 | 可复用，少样本适应 |
+| **状态感知** | World-VLA-Loop | 帧+奖励联合预测 | 奖励耦合到生成器 |
+
+### 按"RL算法"
+
+| 算法 | 代表 | 特点 |
+|------|------|------|
+| **Actor-Critic** | DayDreamer | 标准RL，在线学习 |
+| **Policy Gradient** | World4RL | 端到端策略优化 |
+| **GRPO** | WMPO | On-policy，强性能 |
+| **Flow-GRPO** | ProphRL | 适配flow-based VLA |
+| **轨迹级奖励** | VLA-RFT | 验证奖励，高效 |
+| **VLM奖励** | World-Env, World-Gymnast | 语义级，无需手工设计 |
+| **共进化** | WoVR, World-VLA-Loop | 动态对齐，误差控制 |
+
+---
+
+## 共同发现 / 共识
+
+1. **World Model RL > SFT**：World-Gymnast的18x提升、WoVR的+30点提升是强证据
+2. **VLM奖励是2025-2026标配**：World-Env、World-Gymnast等用VLM提供奖励，避免手工工程
+3. **共进化是刚需**：静态world model不足以支持RL，需要与policy交替改进（WoVR、World-VLA-Loop）
+4. **数据瓶颈的突破**：PlayWorld证明自主play数据比演示数据更好；少量演示+world model RL超越大量SFT
+5. **软件仿真器被超越**：World-Gymnast outperform Mujoco 2x，数据驱动world model取代人工建模仿真器
+
+---
+
+## 关键分歧 / 开放问题
+
+| 分歧点 | 阵营A | 阵营B | 尚未解决 |
+|--------|-------|-------|---------|
+| **隐空间 vs 像素级** | DayDreamer/RSSM: 高效，不兼容VLA | WMPO/World-Gymnast: 与VLA对齐，开销大 | 混合架构？ |
+| **冻结 vs 共进化** | World4RL: 冻结world model，简单 | WoVR/World-VLA-Loop: 共进化，复杂但更强 | 最佳更新频率？ |
+| **VLM奖励 vs 内置奖励** | World-Env: VLM外置奖励 | World-VLA-Loop: world model内嵌奖励 | 可靠性vs速度？ |
+| **on-policy vs off-policy** | WMPO: on-policy GRPO | VLA-RFT: 轨迹级（类off-policy） | VLA的最佳RL算法？ |
+| **演示数据 vs 自主play** | 传统：人类演示 | PlayWorld: 自主play | 数据效率vs覆盖度？ |
+
+---
+
+## 对后续分类的启示
+
+### World Model for RL → World Model for Evaluation
+- 既然world model可以做RL训练环境，自然也可以做策略评估环境
+- **关键问题**：WorldGym、WorldEval等评估工作如何与RL工作协同？
+
+### World Model for RL → Video Generation
+- 视频生成模型（Cosmos Predict等）本身就是world model的backbone
+- **关键问题**：视频生成方向的25篇论文中，哪些是"被动生成"，哪些是"交互式world model"？
+
+---
+
+## 技术工具箱（可复用方法）
+
+| 方法 | 来源 | 适用场景 |
+|------|------|---------|
+| RSSM在线学习 | DayDreamer | 快速验证world model可行性 |
+| 多数据集编排 | UniSim | 构建通用模拟器 |
+| 冻结World Model RL | World4RL | 简化系统，避免联合训练不稳定性 |
+| VLM Reflector | World-Env | 自动生成奖励和终止信号 |
+| 轨迹级验证奖励 | VLA-RFT | 高效、稳定的RL信号 |
+| On-policy GRPO | WMPO | 强性能，与VLA对齐 |
+| Flow-GRPO + FlowScale | ProphRL | Flow-based VLA的RL适配 |
+| 可控Video World Model | WoVR | 减少幻觉，提高rollout稳定性 |
+| Keyframe-Initialized Rollouts | WoVR | 长程误差控制 |
+| 共进化机制 | WoVR/World-VLA-Loop | World model-policy动态对齐 |
+| 状态感知World Model | World-VLA-Loop | 帧+奖励联合预测 |
+| SANS数据集 | World-VLA-Loop | 利用近成功轨迹改善对齐 |
+| 自主Play数据收集 | PlayWorld | 覆盖长尾失败案例 |
+| 组合式World Model | RISE | 动力学+值分离，各组件最优 |
+
+---
+
+## 研究机会（gaps）
+
+1. **层次化World Model**：长程任务（>20步）需要层级world model（高层关键帧+低层插值），尚无明确方案
+2. **World Model的理论保证**：误差累积、收敛性、策略优化保证等缺乏理论分析
+3. **实时推理**：扩散world model的推理速度是实时RL瓶颈，需要加速（如 consistency model、蒸馏）
+4. **跨机器人迁移**：Prophet的少样本适应仅在有限平台验证，通用跨机器人world model是开放问题
+5. **家庭场景闭环**：PlayWorld的自主play在真实家庭中的安全性和覆盖度需要验证
+
+---
+
+*综述日期: 2026-05-30 | 作者: Lead*

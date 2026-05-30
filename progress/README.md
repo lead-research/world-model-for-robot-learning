@@ -9,8 +9,8 @@
 ## 概览
 
 ```yaml
-total_papers: 114
-completed: 60
+total_papers: 115
+completed: 61
 in_progress: 0
 pending: 54
 
@@ -26,8 +26,8 @@ active_category: "wm-for-evaluation"
 
 ### 🔬 Latent-space World Modeling（隐空间世界建模）
 ```
-total: 6
-done: 6
+total: 7
+done: 7
 in_progress: 0
 pending: 0
 ```
@@ -37,6 +37,7 @@ pending: 0
 - [x] JEPA-VLA (arXiv'26.02) — **done** → [笔记](notes/2026-05-07.md#jepa-vla)
 - [x] World Guidance / WoG (arXiv'26.02) — **done** → [笔记](notes/2026-05-07.md#wog)
 - [x] DIAL (arXiv'26.03) — **done** → [笔记](notes/2026-05-07.md#dial)
+- [x] LeWorldModel (arXiv'26.03) — **done** → [笔记](notes/2026-05-30-lewm.md#leworldmodel)
 - **分类综述**: [synthesis.md](synthesis.md)
 
 ### 🏗️ Single-backbone Policies（单一主干策略）
