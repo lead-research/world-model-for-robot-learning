@@ -18,12 +18,12 @@
 | 🧩 MoE/MoT-style | **9 / 9** | ✅ **已完成** |
 | 🔗 Unified VLA | **12 / 12** | ✅ **已完成** |
 | 🎮 World Model for RL | **16 / 16** | ✅ **已完成** |
-| 📏 World Model for Evaluation | 0 / 10 | 🔄 **当前进行** |
-| 🎬 Video Generation | 0 / 25 | ⚪ 待启动 |
+| 📏 World Model for Evaluation | 10 / 10 | ✅ **已完成** |
+| 🎬 Video Generation | 6 / 25 | 🔄 **当前进行** |
 | 📋 Benchmarks | 0 / 8 | ⚪ 待启动 |
 | 🗂️ Datasets | 0 / 8 | ⚪ 待启动 |
 
-**总体: 61 / 115 完成 (53.0%)**
+**总体: 77 / 115 完成 (67.0%)**
 
 ---
 
@@ -36,12 +36,12 @@ Phase 3: IDM-style (12篇)          ──────── ✅ 已完成 (2026
 Phase 4: MoE/MoT-style (9篇)        ──────── ✅ 已完成 (2026-05-22补课)
 Phase 5: Unified VLA (12篇)        ──────── ✅ 已完成 (2026-05-22补课)
 Phase 6: WM for RL (16篇)          ──────── ✅ 已完成 (2026-05-30, 16篇)
-Phase 7: WM for Evaluation (10篇)  ──────── 🔄 当前进行
-Phase 8: Video Generation (25篇)    ──────── ⚪ 待启动 (~7天)
+Phase 7: WM for Evaluation (10篇)  ──────── ✅ 已完成 (2026-05-31, 10篇)
+Phase 8: Video Generation (25篇)    ──────── 🔄 当前进行 (6/25)
 Phase 9: Benchmarks (8篇)            ──────── ⚪ 待启动 (~2天)
 Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2天)
 
-预计总时长: ~33天 (约5周, 每日4篇)
+预计总时长: ~35天 (约5周, 每日4-16篇)
 ```
 
 ---
@@ -125,6 +125,30 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 | 2026-05-08 | **UWM** — Unified World Models (RSS'25) | [笔记](papers/single-backbone/uwm.md) |
 | 2026-05-08 | **UVA** — Unified Video Action Model (RSS'25) | [笔记](papers/single-backbone/uva.md) |
 
+### World Model for Evaluation (10/10 ✅)
+| 日期 | 论文 | 链接 |
+|------|------|------|
+| 2026-05-31 | **V-JEPA 2.1** — Unlocking Dense Features in Video SSL (arXiv'26.03) | [笔记](papers/wm-for-eval/v-jepa-21.md) |
+| 2026-05-31 | **DreamPlan** — RL Fine-Tuning of VLM Planners via Video WMs (arXiv'26.03) | [笔记](papers/wm-for-eval/dreamplan.md) |
+| 2026-05-31 | **GPC** — Inference-Time Enhancement via Predictive WM (RA-L'26) | [笔记](papers/wm-for-eval/gpc.md) |
+| 2026-05-31 | **Evaluating Gemini Robotics** — in Veo World Simulator (arXiv'25.12) | [笔记](papers/wm-for-eval/evaluating-gemini-robotics-policies-in-a-veo-world-simulator.md) |
+| 2026-05-31 | **Scalable Policy Evaluation** — with Video World Models (arXiv'25.11) | [笔记](papers/wm-for-eval/scalable-policy-evaluation-with-video-world-models.md) |
+| 2026-05-31 | **WorldEval** — World Model as Real-World Policies Evaluator (arXiv'25.05) | [笔记](papers/wm-for-eval/worldeval.md) |
+| 2026-05-31 | **Horizon Imagination** — Efficient On-Policy Rollout in Diffusion WMs (ICLR'26) | [笔记](papers/wm-for-eval/horizon-imagination.md) |
+| 2026-05-31 | **WorldGym** — World Model as Environment for Policy Evaluation (ICLR'26) | [笔记](papers/wm-for-eval/worldgym.md) |
+| 2026-05-31 | **TD-MPC2** — Scalable World Models for Continuous Control (ICLR'24) | [笔记](papers/wm-for-eval/td-mpc2.md) |
+| 2026-05-30 | **LeWorldModel** — Stable End-to-End JEPA from Pixels (arXiv'26.03) | [笔记](papers/latent-space-wm/leworldmodel.md) |
+
+### Video Generation (6/25 🔄)
+| 日期 | 论文 | 链接 |
+|------|------|------|
+| 2026-05-31 | **TesserAct** — Learning 4D Embodied World Models (arXiv'25.04) | [笔记](papers/video-generation/tesseract.md) |
+| 2026-05-31 | **Mask2IV** — Interaction-Centric Video Generation via Mask Trajectories (AAAI'26) | [笔记](papers/video-generation/mask2iv.md) |
+| 2026-05-31 | **Ctrl-World** — Controllable Generative World Model (ICLR'26) | [笔记](papers/video-generation/ctrl-world.md) |
+| 2026-05-31 | **DreamGen** — Generalization via Video World Models (CoRL'25) | [笔记](papers/video-generation/dreamgen.md) |
+| 2026-05-31 | **RoboDreamer** — Compositional World Models for Robot Imagination (ICML'24) | [笔记](papers/video-generation/robodreamer.md) |
+| 2026-05-31 | **VLP** — Video Language Planning (ICLR'24) | [笔记](papers/video-generation/video-language-planning-vlp.md) |
+
 ### Latent-space World Modeling (7/7 ✅)
 | 日期 | 论文 | 链接 |
 |------|------|------|
@@ -171,4 +195,4 @@ Phase 10: Datasets (8篇)            ──────── ⚪ 待启动 (~2�
 
 ---
 
-*Last updated: 2026-05-30 (with LeWorldModel)*
+*Last updated: 2026-05-31 (16 papers: WM for Evaluation + Video Generation)*
