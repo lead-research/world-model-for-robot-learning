@@ -1,16 +1,45 @@
 # PhysWorld
 
-> PhysWorld: Robot Learning from a Physical World Model
-> Venue: ICCV'25
+> **PhysWorld: From Real Videos to World Models of Deformable Objects via Physics-Aware Demonstration Synthesis**  
+> ICCV'25 | arXiv:2510.21447 | [Project](https://physworld.github.io/)
 
 ---
 
-## 基本信息
+## 核心问题
 
-- **arXiv**: https://arxiv.org/abs/2505.09171
-- **Code**: —
-- **Project**: —
+如何从有限的真实视频构建准确且快速的可变形物体世界模型？
 
-## 待读笔记
+## 核心方法
 
-（待补充深度分析）
+三步框架：1) 用MPM仿真器构建物理一致数字孪生；2) 通过VMP-Gen和P3P-Pert生成多样演示；3) 训练GNN-based世界模型，推理速度比PhysTwin快47倍。
+
+## 主要特点
+
+- **物理-学习混合**: 用强大仿真器（MPM）生成数据，用轻量网络（GNN）推理
+- **自动本构模型选择**: VLM（Qwen3）自动选择最合适的材料模型
+- **全局到局部优化**: 先优化全局均匀物理属性，再细化局部异构属性
+- **多样运动生成**: VMP-Gen通过Bézier曲线生成各种运动模式
+- **部分感知扰动**: P3P-Pert对物理属性进行语义引导的随机扰动
+- **速度优势**: 47倍快于PhysTwin，同时保持竞争力精度
+
+## 关键实验发现
+
+- **22个场景**: 覆盖多种可变形物体和交互方式
+- **vs PhysTwin**: 47倍更快，精度有竞争力
+- **泛化性**: 在新交互上泛化良好
+- **实时性**: 支持实时应用，如VR/AR和机器人控制
+
+## 局限性
+
+- MPM仿真器对复杂接触和破碎等极端变形模拟有限
+- VLM的本构模型选择可能不够精确
+- 全局到局部优化需要合理的初始值
+- GNN在训练分布之外的物体和交互上可能泛化有限
+
+## 对研究工作的启示
+
+物理仿真器+GNN的混合框架可以直接借鉴。VLM自动选择本构模型是实用创新。可变形物体是家庭场景中常见挑战（布料、食物、液体），PhysWorld提供了有效方案。
+
+---
+
+*笔记日期: 2026-06-02*
