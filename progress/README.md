@@ -1,59 +1,235 @@
-# World Model Research 学习进度
+# 学习进度追踪
 
-> 维护: world-model-research 技能
-> 最后更新: 2026-06-01
+> 更新日期: 2026-06-07
+> 技能: world-model-research
+> 完整论文列表已录入: 115 篇
 
-## 总进度
+---
 
-- **总论文数**: 115
-- **已完成**: 81 (70%)
-- **剩余**: 34
+## 概览
+
+```yaml
+total_papers: 115
+completed: 99
+in_progress: 1
+pending: 15
+
+# 当前活跃分类
+active_category: "video-generation"
+# 已完成: Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (9/9), Unified VLA (12/12), World Model for RL (16/16), World Model for Evaluation (10/10)
+# 当前: Video Generation（25篇，23/25完成，1 blocked），Benchmarks（8篇，5/8完成）
+```
+
+---
 
 ## 分类进度
 
-| 分类 | 总数 | 已完成 | 进度 |
-|------|------|--------|------|
-| Latent-space WM | 7 | 7 | ✅ 完成 |
-| Single-backbone | 8 | 8 | ✅ 完成 |
-| IDM-style | 12 | 12 | ✅ 完成 |
-| MoE/MoT-style | 9 | 9 | ✅ 完成 |
-| Unified VLA | 12 | 12 | ✅ 完成 |
-| World Model for RL | 16 | 16 | ✅ 完成 |
-| World Model for Evaluation | 10 | 10 | ✅ 完成 |
-| Video Generation | 25 | 10 | 🔄 进行中 |
-| Benchmarks | 8 | 0 | ⏳ 待开始 |
-| Datasets | 8 | 0 | ⏳ 待开始 |
+### 🔬 Latent-space World Modeling（隐空间世界建模）
+```
+total: 7
+done: 7
+in_progress: 0
+pending: 0
+```
+- [x] FLARE (CoRL'25) — **done**
+- [x] VLA-JEPA (arXiv'26.02) — **done**
+- [x] VISTA (arXiv'26.02) — **done**
+- [x] JEPA-VLA (arXiv'26.02) — **done**
+- [x] World Guidance / WoG (arXiv'26.02) — **done**
+- [x] DIAL (arXiv'26.03) — **done**
+- [x] LeWorldModel (arXiv'26.03) — **done**
 
-## 当前活跃
+### 🏗️ Single-backbone Policies（单一主干策略）
+```
+total: 8
+done: 8
+in_progress: 0
+pending: 0
+```
+- [x] UVA (RSS'25) — **done**
+- [x] UWM (RSS'25) — **done**
+- [x] VideoVLA (NeurIPS'25) — **done**
+- [x] UD-VLA (ICLR'26) — **done**
+- [x] VideoPolicy (arXiv'25.08) — **done**
+- [x] Cosmos Policy (arXiv'26.01) — **done**
+- [x] DreamZero (WAM) (arXiv'26.02) — **done**
+- [x] GigaWorld-Policy (arXiv'26.03) — **done**
 
-- **正在学习**: Video Generation（视频生成方向）
-- **已完成**: 10/25
-- **待完成**: 15篇
+### 🎯 IDM-style Policies（逆动力学策略）
+```
+total: 12
+done: 12
+in_progress: 0
+pending: 0
+```
+- [x] UniPi (NeurIPS'23) — **done**
+- [x] GR-1 (ICLR'24) — **done**
+- [x] VidMan (NeurIPS'24) — **done**
+- [x] VPP (ICML'25) — **done**
+- [x] Gen2Act (CoRL'25) — **done**
+- [x] V2A (ICLR'25) — **done**
+- [x] Video2Act (arXiv'25.12) — **done**
+- [x] mimic-video (arXiv'25.12) — **done**
+- [x] LVP (arXiv'25.12) — **done**
+- [x] Vidarc (arXiv'25.12) — **done**
+- [x] TC-IDM (arXiv'26.01) — **done**
+- [x] Say, Dream, and Act (arXiv'26.02) — **done**
 
-## 最近更新
+### 🧩 MoE/MoT-style Policies（混合专家/混合令牌）
+```
+total: 9
+done: 9
+in_progress: 0
+pending: 0
+```
+- [x] Motus (arXiv'25.12) — **done**
+- [x] mimic-video (arXiv'25.12) — **done**
+- [x] LingBot-VA (arXiv'26.01) — **done**
+- [x] BagelVLA (arXiv'26.02) — **done**
+- [x] LDA-1B (arXiv'26.02) — **done**
+- [x] FRAPPE (arXiv'26.02) — **done**
+- [x] World Guidance (WoG) (arXiv'26.02) — **done**
+- [x] DiT4DiT (arXiv'26.03) — **done**
+- [x] Fast-WAM (arXiv'26.03) — **done**
 
-- **2026-06-01**: 完成4篇 — Video Generation 续读 (DreamDojo, RoboVIP, WoW, GigaWorld-0)
-- **2026-05-31**: 完成16篇 — WM for Evaluation 全部完成 (10篇) + Video Generation 启动 (6篇)
-- **2026-05-30**: 完成16篇 — World Model for RL 全部完成
-- **2026-05-22**: 完成20篇 — 补课批次 (MoE/MoT + Unified VLA)
-- **2026-05-12**: 完成4篇 — IDM-style 续读
-- **2026-05-10**: 完成4篇 — IDM-style 启动
-- **2026-05-09**: 完成4篇 — Single-backbone 续读
-- **2026-05-08**: 完成4篇 — Single-backbone 启动
-- **2026-05-07**: 完成4篇 — Latent-space WM 续读
-- **2026-05-05**: 完成2篇 — Latent-space WM 启动
+### 🔗 Unified VLA Models（统一 VLA 模型）
+```
+total: 12
+done: 12
+in_progress: 0
+pending: 0
+```
+- [x] GR-1 (ICLR'24) — **done**
+- [x] GR-2 (arXiv'24.10) — **done**
+- [x] UP-VLA (ICML'25) — **done**
+- [x] DreamVLA (NeurIPS'25) — **done**
+- [x] UniVLA (ICLR'26) — **done**
+- [x] Genie Envisioner (ICLR'26) — **done**
+- [x] CoWVLA (CVPR'26) — **done**
+- [x] F1 (arXiv'25.09) — **done**
+- [x] RynnVLA-002 (arXiv'25.11) — **done**
+- [x] TriVLA (arXiv'25.07) — **done**
+- [x] InternVLA-A1 (arXiv'26.01) — **done**
+- [x] HALO (arXiv'26.02) — **done**
 
-## 笔记索引
+### 🎮 World Model for RL（用于强化学习）
+```
+total: 16
+done: 16
+in_progress: 0
+pending: 0
+```
+- [x] DayDreamer (CoRL'23) — **done**
+- [x] UniSim (ICLR'24) — **done**
+- [x] DiWA (CoRL'25) — **done**
+- [x] World-Env (arXiv'25.09) — **done**
+- [x] World4RL (arXiv'25.09) — **done**
+- [x] VLA-RFT (arXiv'25.10) — **done**
+- [x] ProphRL (arXiv'25.11) — **done**
+- [x] WMPO (ICLR'26) — **done**
+- [x] RehearseVLA (CVPR'26) — **done**
+- [x] World-Gymnast (arXiv'26.02) — **done**
+- [x] RISE (arXiv'26.02) — **done**
+- [x] VLAW (arXiv'26.02) — **done**
+- [x] GigaBrain-0.5M (arXiv'26.02) — **done**
+- [x] WoVR (arXiv'26.02) — **done**
+- [x] World-VLA-Loop (arXiv'26.02) — **done**
+- [x] PlayWorld (arXiv'26.03) — **done**
 
-| 日期 | 本地笔记 | 覆盖论文数 |
-|------|---------|-----------|
-| 2026-06-01 | notes/2026-06-01.md | 4 |
-| 2026-05-31 | notes/2026-05-31.md | 16 |
-| 2026-05-30 | notes/2026-05-30.md + batch2.md | 16 |
-| 2026-05-22 | notes/2026-05-22.md | 20 |
-| 2026-05-12 | notes/2026-05-12.md | 4 |
-| 2026-05-10 | notes/2026-05-10.md | 4 |
-| 2026-05-09 | notes/2026-05-09.md | 4 |
-| 2026-05-08 | notes/2026-05-08.md | 4 |
-| 2026-05-07 | notes/2026-05-07.md | 4 |
-| 2026-05-05 | notes/2026-05-05.md | 2 |
+### 📏 World Model for Evaluation（用于评估）
+```
+total: 10
+done: 10
+in_progress: 0
+pending: 0
+```
+- [x] TD-MPC2 (ICLR'24) — **done**
+- [x] WorldGym (ICLR'26) — **done**
+- [x] Horizon Imagination (ICLR'26) — **done**
+- [x] WorldEval (arXiv'25.05) — **done**
+- [x] Scalable Policy Evaluation with Video World Models (arXiv'25.11) — **done**
+- [x] Evaluating Gemini Robotics Policies in Veo (arXiv'25.12) — **done**
+- [x] GPC (RA-L'26) — **done**
+- [x] DreamPlan (arXiv'26.03) — **done**
+- [x] LeWorldModel (arXiv'26.03) — **done**
+- [x] V-JEPA 2.1 (arXiv'26.03) — **done**
+
+### 🎬 World Models for Video Generation（视频生成）
+```
+total: 25
+done: 23
+in_progress: 1
+pending: 1
+```
+- [x] Video Language Planning / VLP (ICLR'24) — **done**
+- [x] RoboDreamer (ICML'24) — **done**
+- [x] DreamGen (CoRL'25) — **done**
+- [x] Ctrl-World (ICLR'26) — **done**
+- [x] Mask2IV (AAAI'26) — **done**
+- [x] TesserAct (arXiv'25.04) — **done**
+- [x] Dreamitate (CoRL'24) — **done**
+- [x] DreMa (ICLR'25) — **done**
+- [x] CogVideoX (ICLR'25) — **done**
+- [x] PhysWorld (ICCV'25) — **done**
+- [x] IRASim (ICCV'25) — **done**
+- [ ] RoboEnvision (IROS'25) — **in_progress** — arXiv ID错误/无公开资料
+- [x] RoboMaster (ICLR'26) — **done**
+- [x] Vid2World (ICLR'26) — **done**
+- [x] Genie Envisioner (ICLR'26) — **done** (Unified VLA已分析)
+- [x] ManipDreamer (arXiv'25.04) — **done**
+- [x] EnerVerse-AC (arXiv'25.05) — **done**
+- [x] WoW (arXiv'25.09) — **done**
+- [x] UnifoLM-WMA-0 (Tech Release'25.09) — **done**
+- [x] Cosmos Predict 2.5 (Tech Report'25.10) — **done**
+- [x] GigaWorld-0 (arXiv'25.11) — **done**
+- [x] RoboVIP (arXiv'26.01) — **done**
+- [x] DreamDojo (arXiv'26.02) — **done**
+- [x] Interactive World Simulator (arXiv'26.03) — **done**
+- [x] ABot-PhysWorld (arXiv'26.03) — **done**
+
+### 📋 Benchmarks for Evaluation World-Model
+```
+total: 8
+done: 5
+in_progress: 0
+pending: 3
+```
+- [x] EVA-Bench (ICML'25) — **done**
+- [x] WorldSimBench (ICML'25) — **done**
+- [x] EWMBench (BMVC'25) — **done**
+- [x] DreamGen Bench (CoRL'25) — **done**
+- [x] World-in-World (ICLR'26) — **done**
+- [ ] WoW-World-Eval (arXiv'26.01) — pending
+- [ ] RBench (arXiv'26.01) — pending
+- [ ] WorldArena (arXiv'26.02) — pending
+
+### 🗂️ Datasets（数据集）
+```
+total: 8
+done: 0
+in_progress: 0
+pending: 8
+```
+全部 pending
+
+---
+
+## 今日完成 (2026-06-07) ✅ 11篇完成 + 1篇阻塞
+- Video Generation: IRASim ✅, RoboMaster ✅, Vid2World ✅, ManipDreamer ✅, UnifoLM-WMA-0 ✅, Cosmos Predict 2.5 ✅
+- Benchmarks: EVA-Bench ✅, WorldSimBench ✅, EWMBench ✅, DreamGen Bench ✅, World-in-World ✅
+- 阻塞: RoboEnvision (arXiv ID错误/无公开资料)
+
+### 明日计划 (2026-06-08)
+- 处理 RoboEnvision 阻塞：通过 Google Scholar 或 Awesome 列表维护者确认正确信息
+- 完成 Benchmarks 剩余 3 篇: WoW-World-Eval, RBench, WorldArena
+- 进入 Datasets 分类: 8篇全部待处理
+- 更新 Video Generation 分类综述 + Benchmarks 分类综述
+- git commit && push 到 GitHub
+
+---
+
+## 学习节奏
+
+- **每日目标**: 4-16 篇论文深度阅读 + 笔记（补课日可加量）
+- **每周回顾**: 每周末更新 synthesis.md，归纳该周学到的技术脉络
+- **分类切换**: 完成一个分类的全部论文后，写一份分类综述，再进入下一个分类
