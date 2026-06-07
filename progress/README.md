@@ -10,14 +10,14 @@
 
 ```yaml
 total_papers: 115
-completed: 100
+completed: 101
 in_progress: 0
-pending: 15
+pending: 14
 
 # 当前活跃分类
 active_category: "video-generation"
-# 已完成: Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (9/9), Unified VLA (12/12), World Model for RL (16/16), World Model for Evaluation (10/10)
-# 当前: Video Generation（25篇，24/25完成），Benchmarks（8篇，5/8完成）
+# 已完成: Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (9/9), Unified VLA (12/12), World Model for RL (16/16), World Model for Evaluation (10/10), Video Generation (25/25)
+# 当前: Benchmarks（8篇，5/8完成），Datasets（8篇，0/8）
 ```
 
 ---
@@ -157,17 +157,17 @@ pending: 0
 ### 🎬 World Models for Video Generation（视频生成）
 ```
 total: 25
-done: 24
+done: 25
 in_progress: 0
-pending: 1
+pending: 0
 ```
 - [x] Video Language Planning / VLP (ICLR'24) — **done**
+- [x] Dreamitate (CoRL'24) — **done** — arXiv:2406.16862
 - [x] RoboDreamer (ICML'24) — **done**
 - [x] DreamGen (CoRL'25) — **done**
 - [x] Ctrl-World (ICLR'26) — **done**
 - [x] Mask2IV (AAAI'26) — **done**
 - [x] TesserAct (arXiv'25.04) — **done**
-- [x] Dreamitate (CoRL'24) — **done**
 - [x] DreMa (ICLR'25) — **done**
 - [x] CogVideoX (ICLR'25) — **done**
 - [x] PhysWorld (ICCV'25) — **done**
@@ -186,7 +186,6 @@ pending: 1
 - [x] DreamDojo (arXiv'26.02) — **done**
 - [x] Interactive World Simulator (arXiv'26.03) — **done**
 - [x] ABot-PhysWorld (arXiv'26.03) — **done**
-- [ ] Dreamitate (CoRL'24) — pending（无arXiv/代码/项目页）
 
 ### 📋 Benchmarks for Evaluation World-Model
 ```
@@ -218,6 +217,7 @@ pending: 8
 ## 今日完成 (2026-06-07) ✅ 12篇完成
 - Video Generation: IRASim ✅, RoboEnvision ✅, RoboMaster ✅, Vid2World ✅, ManipDreamer ✅, UnifoLM-WMA-0 ✅, Cosmos Predict 2.5 ✅
 - Benchmarks: EVA-Bench ✅, WorldSimBench ✅, EWMBench ✅, DreamGen Bench ✅, World-in-World ✅
+- Video Generation 分类全部完成！
 
 ### 明日计划 (2026-06-08)
 - 完成 Benchmarks 剩余 3 篇: WoW-World-Eval, RBench, WorldArena
