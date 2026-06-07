@@ -10,14 +10,14 @@
 
 ```yaml
 total_papers: 115
-completed: 99
-in_progress: 1
+completed: 100
+in_progress: 0
 pending: 15
 
 # 当前活跃分类
 active_category: "video-generation"
 # 已完成: Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (9/9), Unified VLA (12/12), World Model for RL (16/16), World Model for Evaluation (10/10)
-# 当前: Video Generation（25篇，23/25完成，1 blocked），Benchmarks（8篇，5/8完成）
+# 当前: Video Generation（25篇，24/25完成），Benchmarks（8篇，5/8完成）
 ```
 
 ---
@@ -157,8 +157,8 @@ pending: 0
 ### 🎬 World Models for Video Generation（视频生成）
 ```
 total: 25
-done: 23
-in_progress: 1
+done: 24
+in_progress: 0
 pending: 1
 ```
 - [x] Video Language Planning / VLP (ICLR'24) — **done**
@@ -172,7 +172,7 @@ pending: 1
 - [x] CogVideoX (ICLR'25) — **done**
 - [x] PhysWorld (ICCV'25) — **done**
 - [x] IRASim (ICCV'25) — **done**
-- [ ] RoboEnvision (IROS'25) — **in_progress** — arXiv ID错误/无公开资料
+- [x] RoboEnvision (IROS'25) — **done** — arXiv:2506.22007
 - [x] RoboMaster (ICLR'26) — **done**
 - [x] Vid2World (ICLR'26) — **done**
 - [x] Genie Envisioner (ICLR'26) — **done** (Unified VLA已分析)
@@ -186,6 +186,7 @@ pending: 1
 - [x] DreamDojo (arXiv'26.02) — **done**
 - [x] Interactive World Simulator (arXiv'26.03) — **done**
 - [x] ABot-PhysWorld (arXiv'26.03) — **done**
+- [ ] Dreamitate (CoRL'24) — pending（无arXiv/代码/项目页）
 
 ### 📋 Benchmarks for Evaluation World-Model
 ```
@@ -214,13 +215,11 @@ pending: 8
 
 ---
 
-## 今日完成 (2026-06-07) ✅ 11篇完成 + 1篇阻塞
-- Video Generation: IRASim ✅, RoboMaster ✅, Vid2World ✅, ManipDreamer ✅, UnifoLM-WMA-0 ✅, Cosmos Predict 2.5 ✅
+## 今日完成 (2026-06-07) ✅ 12篇完成
+- Video Generation: IRASim ✅, RoboEnvision ✅, RoboMaster ✅, Vid2World ✅, ManipDreamer ✅, UnifoLM-WMA-0 ✅, Cosmos Predict 2.5 ✅
 - Benchmarks: EVA-Bench ✅, WorldSimBench ✅, EWMBench ✅, DreamGen Bench ✅, World-in-World ✅
-- 阻塞: RoboEnvision (arXiv ID错误/无公开资料)
 
 ### 明日计划 (2026-06-08)
-- 处理 RoboEnvision 阻塞：通过 Google Scholar 或 Awesome 列表维护者确认正确信息
 - 完成 Benchmarks 剩余 3 篇: WoW-World-Eval, RBench, WorldArena
 - 进入 Datasets 分类: 8篇全部待处理
 - 更新 Video Generation 分类综述 + Benchmarks 分类综述
