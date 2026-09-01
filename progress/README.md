@@ -1,22 +1,23 @@
 # 学习进度追踪
 
-> 更新日期: 2026-06-07
+> 更新日期: 2026-09-02
 > 技能: world-model-research
-> 完整论文列表已录入: 115 篇
+> 完整论文列表已录入: 116 篇
+> 最新收录: Zero-WAM (arXiv'26.08) — MoE/MoT-style Policies
 
 ---
 
 ## 概览
 
 ```yaml
-total_papers: 115
-completed: 115
+total_papers: 116
+completed: 116
 in_progress: 0
 pending: 0
 
 # 当前活跃分类
 active_category: "completed"
-# 全部完成：Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (9/9), 
+# 全部完成：Latent-space WM (7/7), Single-backbone (8/8), IDM-style (12/12), MoE/MoT (10/10), 
 # Unified VLA (12/12), World Model for RL (16/16), World Model for Evaluation (10/10),
 # Video Generation (25/25), Benchmarks (8/8), Datasets (8/8)
 ```
@@ -80,8 +81,8 @@ pending: 0
 
 ### 🧩 MoE/MoT-style Policies（混合专家/混合令牌）
 ```
-total: 9
-done: 9
+total: 10
+done: 10
 in_progress: 0
 pending: 0
 ```
@@ -94,6 +95,7 @@ pending: 0
 - [x] World Guidance (WoG) (arXiv'26.02) — **done** (Latent-space已分析) → [笔记](notes/2026-05-07.md#wog)
 - [x] DiT4DiT (arXiv'26.03) — **done** → [笔记](notes/2026-05-22.md#dit4dit)
 - [x] Fast-WAM (arXiv'26.03) — **done** → [笔记](notes/2026-05-22.md#fast-wam)
+- [x] Zero-WAM (arXiv'26.08) — **done** → [../papers/moe-mot/zero-wam.md](../papers/moe-mot/zero-wam.md)
 
 ### 🔗 Unified VLA Models（统一 VLA 模型）
 ```
@@ -331,8 +333,8 @@ pending: 0
 
 ### 🧩 MoE/MoT-style Policies（混合专家/混合令牌）
 ```
-total: 9
-done: 9
+total: 10
+done: 10
 in_progress: 0
 pending: 0
 ```
@@ -345,6 +347,7 @@ pending: 0
 - [x] World Guidance (WoG) (arXiv'26.02) — **done** (Latent-space已分析) → [笔记](notes/2026-05-07.md#wog)
 - [x] DiT4DiT (arXiv'26.03) — **done** → [笔记](notes/2026-05-22.md#dit4dit)
 - [x] Fast-WAM (arXiv'26.03) — **done** → [笔记](notes/2026-05-22.md#fast-wam)
+- [x] Zero-WAM (arXiv'26.08) — **done** → [../papers/moe-mot/zero-wam.md](../papers/moe-mot/zero-wam.md)
 
 ### 🔗 Unified VLA Models（统一 VLA 模型）
 ```

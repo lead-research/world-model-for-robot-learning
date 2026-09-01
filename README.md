@@ -1,6 +1,6 @@
 # 🤖 World Model Research Notes
 
-> 系统学习 [Awesome World Models for Robotics Policy](https://github.com/NTUMARS/Awesome-World-Model-for-Robotics-Policy) 论文列表（**115篇**），建立世界模型 + 具身智能深度知识库。
+> 系统学习 [Awesome World Models for Robotics Policy](https://github.com/NTUMARS/Awesome-World-Model-for-Robotics-Policy) 论文列表（**116篇**），建立世界模型 + 具身智能深度知识库。
 >
 > 维护者: Lead (AI Research Assistant) for dli
 > 
@@ -17,7 +17,7 @@
 | 🔬 Latent-space World Modeling | **7 / 7** | ✅ **已完成** |
 | 🏗️ Single-backbone Policies | **8 / 8** | ✅ **已完成** |
 | 🎯 IDM-style Policies | **12 / 12** | ✅ **已完成** |
-| 🧩 MoE/MoT-style | **9 / 9** | ✅ **已完成** |
+| 🧩 MoE/MoT-style | **10 / 10** | ✅ **已完成** |
 | 🔗 Unified VLA | **12 / 12** | ✅ **已完成** |
 | 🎮 World Model for RL | **16 / 16** | ✅ **已完成** |
 | 📏 World Model for Evaluation | **10 / 10** | ✅ **已完成** |
@@ -25,7 +25,7 @@
 | 📋 Benchmarks | **8 / 8** | ✅ **已完成** |
 | 🗂️ Datasets | **8 / 8** | ✅ **已完成** |
 
-**总体: 115 / 115 完成 (100%)** 🎉
+**总体: 116 / 116 完成 (100%)** 🎉
 
 ---
 
@@ -35,7 +35,7 @@
 Phase 1: Latent-space WM (7篇)     ──────── ✅ 已完成 (2026-05-05 ~ 2026-05-30)
 Phase 2: Single-backbone (8篇)     ──────── ✅ 已完成 (2026-05-08 ~ 2026-05-09)
 Phase 3: IDM-style (12篇)          ──────── ✅ 已完成 (2026-05-10 ~ 2026-05-22)
-Phase 4: MoE/MoT-style (9篇)       ──────── ✅ 已完成 (2026-05-22补课)
+Phase 4: MoE/MoT-style (10篇)       ──────── ✅ 已完成 (2026-05-22补课, 2026-09-02新增Zero-WAM)
 Phase 5: Unified VLA (12篇)        ──────── ✅ 已完成 (2026-05-22补课)
 Phase 6: WM for RL (16篇)          ──────── ✅ 已完成 (2026-05-30, 16篇)
 Phase 7: WM for Evaluation (10篇)  ──────── ✅ 已完成 (2026-05-31, 10篇)
@@ -66,9 +66,10 @@ Phase 10: Datasets (8篇)            ──────── ✅ 已完成 (202
 | 2026-05-10 | **GR-1** — Large-Scale Video Generative Pre-training (ICLR'24) | [笔记](papers/idm-style/gr-1.md) |
 | 2026-05-10 | **UniPi** — Learning Universal Policies via Text-Guided Video Generation (NeurIPS'23) | [笔记](papers/idm-style/unipi.md) |
 
-### MoE/MoT-style Policies (9/9 ✅)
+### MoE/MoT-style Policies (10/10 ✅)
 | 日期 | 论文 | 链接 |
 |------|------|------|
+| 2026-09-02 | **Zero-WAM** — In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization (arXiv'26.08) | [笔记](papers/moe-mot/zero-wam.md) |
 | 2026-05-22 | **Fast-WAM** — Do World Action Models Need Test-Time Future Imagination? (arXiv'26.03) | [笔记](papers/moe-mot/fast-wam.md) |
 | 2026-05-22 | **DiT4DiT** — Jointly Modeling Video Dynamics and Actions (arXiv'26.03) | [笔记](papers/moe-mot/dit4dit.md) |
 | 2026-05-22 | **FRAPPE** — Infusing World Modeling into Generalist Policies (arXiv'26.02) | [笔记](papers/moe-mot/frappe.md) |
